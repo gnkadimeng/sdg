@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}Well Done! | SDG Escape Room{% endblock %}
+{% block content %}
+<div class="text-center py-5">
+  <h1 class="display-4 text-success fw-bold">🎉 Congratulations!</h1>
+  <p class="lead">You have completed all riddles for <strong>SDG {{ sdg_num }}</strong>.</p>
+  <p>You used <strong>{{ clues }}</strong> clue{{ clues != 1 and 's' or '' }} to crack the code.</p>
+
+  <div class="mt-5">
+    <h4 class="text-primary fw-semibold mb-3">🔍 Here are all the correct answers:</h4>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="list-group">
+          {% for riddle in riddles %}
+          <div class="list-group-item">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">Riddle {{ loop.index }}</h5>
+            </div>
+            <p class="mb-1"><strong>Question:</strong> {{ riddle.question }}</p>
+            <p class="mb-1"><strong>Answer:</strong> {{ riddle.answer }}</p>
+            {% if riddle.clue %}
+            <small class="text-muted"><strong>Clue:</strong> {{ riddle.clue }}</small>
+            {% endif %}
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-4">
+    <h4 class="text-primary fw-semibold mb-3">🧩 Grab the Puzzle Piece for the Final Game</h4>
+    <a href="#finalgame">
+      <img src="{{ url_for('static', filename='img/puzzle.gif') }}" alt="Puzzle Piece" class="img-fluid rounded shadow-sm mb-4" style="max-width: 200px; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+    </a>
+  </div>
+
+  <div class="mt-4">
+    <a href="{{ url_for('dashboard') }}" class="btn btn-outline-primary me-2">Back to Dashboard</a>
+    <a href="{{ url_for('sdg_quiz', sdg_num=sdg_num) }}" class="btn btn-success">Try Again 🔁</a>
+  </div>
+</div>
+{% endblock %}

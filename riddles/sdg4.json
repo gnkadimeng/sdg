@@ -1,0 +1,62 @@
+[
+    {
+        "question": "I am a place where books abound, knowledge and wisdom can be found. Open to all who seek to learn, within my walls, minds brightly burn. What am I?",
+        "answer": "Library",
+        "clue": "This UJ facility offers external memberships, granting access to vast resources and study spaces.",
+        "image": "library.gif"
+    },
+    {
+        "question": "I am a digital realm where courses are free, accessible to all, from mountain to sea. UJ offers me to promote learning's light, advancing knowledge day and night. What am I?",
+        "answer": "MOOCs",
+        "clue": "UJ provides these online platforms to the public, supporting lifelong learning without formal enrollment.",
+        "image": "moocs.png"
+    },
+    {
+        "question": "When NSFAS won't cover it all, I step in so students won't fall. I help those caught in the funding gap. What UJ fund picks up the slack?",
+        "answer": "Missing Middle",
+        "clue": "UJ's financial support for students who don't qualify for NSFAS but still need help.",
+        "image": "missing_money.gif"
+    },    
+    {
+        "question": "I fuel big dreams and startup schemes, where ideas grow beyond the seams. If you've got a pitch that's bold and bright, I might just fund your next insight. What am I?",
+        "answer": "Innovation platform",
+        "clue": "This UJ platform funds innovative student and staff projects with entrepreneurial potential.",
+        "image": "innovation.gif"
+    },    
+    {
+        "question": "I am the global goal aiming to teach, ensuring quality education for each. Numbered fourth among the seventeen, promoting learning, fair and clean. What am I?",
+        "answer": "SDG 4",
+        "clue": "This SDG focuses on education and is central to our escape room theme.",
+        "image": "sdg4.gif"
+    },
+    {
+        "question": "If first-year work feels tough to bear, I'm the team that gets you there. With writing, reading, math in hand, I help you thrive, not just withstand. What am I?",
+        "answer": "ADC",
+        "clue": "This centre supports students academically, especially in first year.",
+        "image": "adc.jpeg"
+    },    
+    {
+        "question": "Short and sharp, yet rich in gain, I help you learn and grow your brain. From coding to public speaking flair, what UJ courses take you there?",
+        "answer": "Continuing Education Programmes",
+        "clue": "These are UJ's short courses and upskilling programmes for professionals and lifelong learners.",
+        "image": "cep.gif"
+    },    
+    {
+        "question": "You can run a lab without a lab coat on, in 3D worlds where science is strong. With goggles or screens, I bring STEM to life. What UJ tech avoids real lab strife?",
+        "answer": "VARSTEME",
+        "clue": "UJ's immersive learning project using virtual and augmented reality for science education.",
+        "image": "var.gif"
+    },    
+    {
+        "question": "I am the practice of learning anew, at any age, refreshing the view. UJ supports me through various means, ensuring education's light always gleams. What am I?",
+        "answer": "Lifelong Learning",
+        "clue": "This concept involves continuous education beyond traditional schooling years.",
+        "image": "lifelong_learning.gif"
+    },
+    {
+        "question": "From Moodle to hybrid classes too, I help tech make learning new. My name says I'm here for the academic side. What UJ centre is your digital guide?",
+        "answer": "CAT",
+        "clue": "This UJ centre helps integrate tech into classrooms and learning environments.",
+        "image": "cat.png"
+    }    
+]

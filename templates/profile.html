@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block title %}My Profile{% endblock %}
+{% block content %}
+<div class="container mt-5">
+  <h2 class="mb-4 text-center">👤 Welcome, {{ name }}</h2>
+
+  <div class="card text-center mb-4">
+    <div class="card-body">
+      <h5 class="card-title">🌟 Total Points Earned</h5>
+      <p class="display-5 fw-bold text-success">{{ points }}</p>
+    </div>
+  </div>
+
+  <h4 class="mb-3">📈 SDG Engagement Summary</h4>
+  <div class="table-responsive">
+    <table class="table table-bordered align-middle">
+      <thead class="table-light">
+        <tr>
+          <th>SDG</th>
+          <th>Views</th>
+          <th>Plays</th>
+          <th>Progress</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for sdg_id, data in engagement.items() %}
+        <tr>
+          <td>SDG {{ sdg_id }}</td>
+          <td>{{ data.view }}</td>
+          <td>{{ data.play }}</td>
+          <td>
+            <div class="progress">
+              {% set progress = (data.play / 10 * 100) if data.play < 10 else 100 %}
+              <div class="progress-bar bg-info" role="progressbar" style="width: {{ progress }}%;">
+                {{ progress|round }}%
+              </div>
+            </div>
+          </td>
+        </tr>
+        {% else %}
+        <tr>
+          <td colspan="4" class="text-center text-muted">No engagement data yet.</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <div class="text-center mt-4">
+    <a href="{{ url_for('dashboard') }}" class="btn btn-secondary">⬅ Back to Dashboard</a>
+  </div>
+</div>
+{% endblock %}

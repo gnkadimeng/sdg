@@ -1,0 +1,63 @@
+[
+    {
+      "question": "I keep track of every green plan, from Gauteng's soil to ocean's span. UJ uses me to guide what's next — what research tool keeps data indexed?",
+      "answer": "Environmental Register",
+      "clue": "This tool centralizes sustainability projects and research.",
+      "image": "environmental_research_register.gif"
+    },
+    {
+      "question": "I'm a global home where SDGs meet, UJ connects here to ideas elite. From Oxford to Joburg, we brainstorm with flair — what network sparks SDG care?",
+      "answer": "Impact Hub",
+      "clue": "A global collaboration space for sustainability innovation.",
+      "image": "sdg_impact_hub.gif"
+    },
+    {
+      "question": "I start with a hashtag and end with a gift, I help UJ spirits and communities lift. From food drives to books, I give back in style — what donation drive makes students smile?",
+      "answer": "#UJDOnation",
+      "clue": "A kindness campaign with impact across campus and beyond.",
+      "image": "ujdonation.gif"
+    },
+    {
+      "question": "When you learn by doing and serve with care, I'm the class that takes you there. Your project counts, the people matter — what am I, where theory meets chatter?",
+      "answer": "Service Learning",
+      "clue": "UJ blends coursework with community action through me.",
+      "image": "service_learning.gif"
+    },
+    {
+      "question": "I power solutions, green and wise, from solar arrays to eco-wise ties. UJ's tech champion, clean and bright — what station brings green ideas to light?",
+      "answer": "UJ PEETS",
+      "clue": "A UJ hub for clean technology and sustainable innovation.",
+      "image": "uj_peets.gif"
+    },
+    {
+      "question": "I bring doctors without the fee, free screenings for the community. In Germiston I lend a hand — what health service across UJ lands?",
+      "answer": "Health Screenings",
+      "clue": "Offered by UJ's Faculty of Health Sciences to the public.",
+      "image": "uj_health_screenings.gif"
+    },
+    {
+      "question": "From Africa to Oxford, I bridge the gap, sharing climate research and global maps. Together we tackle water and sun — what partnership makes UJ's research run?",
+      "answer": "Oxford Partnership",
+      "clue": "A climate and capacity-building collaboration.",
+      "image": "uj_oxford_partnership.gif"
+    },
+    {
+      "question": "Volunteers we are, in orange and black, from helping kids to cleaning a shack. What UJ team serves far and wide, with skills and heart side by side?",
+      "answer": "Organised Outreach",
+      "clue": "UJ's structured programs that take student service into communities.",
+      "image": "organised_outreach.gif"
+    },
+    {
+      "question": "From data to policy, I make a link, helping SA act and think. UJ's research helps nations decide — what SDG tool walks by their side?",
+      "answer": "Policy Support",
+      "clue": "A UJ collaboration with government and NGOs.",
+      "image": "sdg_policy_support_initiative.gif"
+    },
+    {
+      "question": "I'm a program that helps others grow, with skills for justice, water, and solar flow. From Africa to Asia, my lessons spread — what UJ effort helps others get ahead?",
+      "answer": "Capacity Building",
+      "clue": "Training programs for global policymakers and researchers.",
+      "image": "capacity_building_programs.gif"
+    }
+  ]
+  

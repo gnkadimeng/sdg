@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}Admin Dashboard{% endblock %}
+{% block content %}
+<div class="container mt-5">
+  <h2 class="text-center mb-4">🛠️ Admin Dashboard</h2>
+
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="card h-100 shadow">
+        <div class="card-body text-center">
+          <h5 class="card-title">📋 Questionnaire Responses</h5>
+          <p class="card-text">View all student survey submissions.</p>
+          <a href="{{ url_for('admin_questionnaires') }}" class="btn btn-outline-primary">View</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card h-100 shadow">
+        <div class="card-body text-center">
+          <h5 class="card-title">👥 Registered Users</h5>
+          <p class="card-text">Manage users, deactivate accounts or reset passwords.</p>
+          <a href="{{ url_for('admin_users') }}" class="btn btn-outline-primary">Manage</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="col-md-4">
+      <div class="card h-100 shadow">
+        <div class="card-body text-center">
+          <h5 class="card-title">📈 SDG Engagement Table</h5>
+          <p class="card-text">View total SDG views and plays in table format.</p>
+          <a href="{{ url_for('admin_sdg_stats') }}" class="btn btn-outline-primary">View Stats</a>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="col-md-4">
+      <div class="card h-100 shadow">
+        <div class="card-body text-center">
+          <h5 class="card-title">📊 SDG Engagement Charts</h5>
+          <p class="card-text">Visualize SDG stats using interactive bar graphs.</p>
+          <a href="{{ url_for('admin_sdg_charts') }}" class="btn btn-outline-primary">View Charts</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+{% endblock %}

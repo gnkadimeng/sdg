@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}Registered Users | Admin{% endblock %}
+{% block content %}
+<div class="container mt-5">
+  <h2 class="mb-4 text-center fw-bold">👥 Registered Users</h2>
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+      <thead class="table-dark">
+        <tr>
+          <th>#</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for user in users %}
+        <tr>
+          <td>{{ loop.index }}</td>
+          <td>{{ user.firstname }}</td>
+          <td>{{ user.lastname }}</td>
+          <td>{{ user.email }}</td>
+          <td>
+            {% if user.active %}
+              <span class="badge bg-success">Active</span>
+            {% else %}
+              <span class="badge bg-danger">Inactive</span>
+            {% endif %}
+          </td>
+          <td>
+            <a href="{{ url_for('toggle_user_status', user_id=user.id) }}" class="btn btn-sm btn-warning">Toggle</a>
+            <a href="{{ url_for('reset_user_password', user_id=user.id) }}" class="btn btn-sm btn-danger">Reset Password</a>
+          </td>
+        </tr>
+        {% else %}
+        <tr>
+          <td colspan="6" class="text-center text-muted">No users found.</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <div class="text-center mt-3">
+    <a href="{{ url_for('admin_dashboard') }}" class="btn btn-outline-secondary">⬅ Back to Dashboard</a>
+  </div>
+</div>
+{% endblock %}

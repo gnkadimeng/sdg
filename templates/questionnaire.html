@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block title %}Questionnaire | SDG Escape Room{% endblock %}
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-md-8">
+    <div class="card shadow p-4">
+      <h2 class="text-center mb-4">🎓 Student Questionnaire</h2>
+      <form method="POST">
+        <div class="mb-3">
+          <label for="faculty" class="form-label">What is your faculty?</label>
+          <input type="text" name="faculty" class="form-control" id="faculty" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="year" class="form-label">In what year are you?</label>
+          <select name="year" id="year" class="form-select" required>
+            <option value="">Select year</option>
+            <option value="Incoming">Incoming Student</option>
+            <option value="1st">1st Year</option>
+            <option value="2nd">2nd Year</option>
+            <option value="3rd">3rd Year</option>
+            <option value="4th">4th Year</option>
+            <option value="Honours">Honours</option>
+            <option value="Masters">Masters</option>
+            <option value="Doctorate">Doctorate</option>
+            <option value="Graduate">Graduate</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Do you prefer online or in-person classes?</label>
+          <div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="preference" id="online" value="Online" required>
+              <label class="form-check-label" for="online">Online</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="preference" id="inperson" value="In-person">
+              <label class="form-check-label" for="inperson">In-person</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-grid">
+          <button type="submit" class="btn btn-success">Submit & Continue</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

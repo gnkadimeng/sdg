@@ -1,0 +1,73 @@
+/* UJ Theme Variables */
+:root {
+    --uj-orange: #F26522;
+    --uj-black: #000000;
+    --uj-white: #FFFFFF;
+    --uj-grey: #939598;
+  }
+  
+  /* Basic page structure */
+  html, body {
+    height: 100%;
+    margin: 0;
+    background-color: var(--uj-white);
+    color: var(--uj-black);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background-color: var(--uj-orange) !important;
+  }
+  
+  .navbar-brand img {
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  /* Make the main content flexible */
+  .container {
+    flex: 1;
+  }
+  
+  /* Footer styles */
+  footer {
+    background-color: var(--uj-black);
+    color: var(--uj-white);
+    text-align: center;
+    padding: 1rem 0;
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+  
+  /* Buttons */
+  .btn-outline-light {
+    border-color: var(--uj-white);
+    color: var(--uj-white);
+  }
+  
+  .btn-outline-light:hover {
+    background-color: var(--uj-white);
+    color: var(--uj-black);
+  }
+  
+  /* Alert boxes with orange accent */
+  .alert {
+    border-left: 5px solid var(--uj-orange);
+  }
+
+/* Top black banner */
+.top-banner {
+    height: 1cm;
+    background-color: var(--uj-black);
+  }
+  
+  /* Navbar stays below the black banner */
+  .navbar {
+    background-color: var(--uj-orange) !important;
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+  

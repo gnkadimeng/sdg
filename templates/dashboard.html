@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Dashboard | SDG Escape Room{% endblock %}
+{% block content %}
+<div class="text-center mb-4">
+  <h1 class="display-5 fw-bold">🎮 Play SDGs</h1>
+  <p class="lead">Choose an SDG to learn or play</p>
+</div>
+
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-6 g-4">
+  {% for sdg in range(1, 19) %}
+  <div class="col">
+    <div class="card h-100 shadow">
+      <img src="{{ url_for('static', filename='sdgs/' ~ '%02d'|format(sdg) ~ '.jpg') }}" class="card-img-top" alt="SDG {{ sdg }}">
+      <div class="card-body text-center d-flex flex-column">
+        <h5 class="card-title">SDG {{ sdg }}</h5>
+        <div class="mt-auto d-flex flex-column gap-2">
+          <a href="{{ url_for('learn_sdg', sdg_id=sdg) }}" class="btn btn-outline-primary">Learn</a>
+          <a href="{{ url_for('sdg_quiz', sdg_num=sdg) }}" class="btn btn-success">Start Game</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

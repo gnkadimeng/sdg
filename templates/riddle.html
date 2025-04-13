@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}SDG {{ sdg_num }} | Escape Challenge{% endblock %}
+{% block content %}
+<div class="text-center mb-4">
+  <h2 class="fw-bold">🔐 SDG {{ sdg_num }} Mystery Challenge</h2>
+  {% if index == 1 %}
+  <div class="alert alert-dark mt-3 shadow-sm">
+    <p class="lead">You find yourself in a locked chamber of forgotten knowledge. Clues are scattered around, but only
+      those who understand the essence of SDG {{ sdg_num }} can escape. Each riddle brings you closer to unlocking the
+      path forward...</p>
+  </div>
+  {% endif %}
+</div>
+
+<div class="card shadow p-4">
+  {% if riddle.image %}
+  <div class="text-center my-3">
+    <img src="{{ url_for('static', filename='img/' ~ riddle.image) }}" alt="Riddle Image"
+      class="img-fluid rounded shadow" style="max-height: 250px;">
+  </div>
+  {% endif %}
+
+  <h5 class="mb-3">🧩 Riddle {{ index }}</h5>
+  <p class="lead">{{ riddle.question }}</p>
+
+  {% if message %}
+  <div class="alert alert-warning">{{ message }}</div>
+  {% endif %}
+
+  <form method="POST">
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" name="answer" placeholder="Type your answer..." required>
+      <button class="btn btn-primary" type="submit">
+        {% if is_last_question %}
+          Final Submit 🏁
+        {% else %}
+          Save & Continue ➡️
+        {% endif %}
+      </button>
+    </div>
+    <button class="btn btn-outline-info" name="show_clue" value="true">Show Clue 🕵️</button>
+  </form>
+
+  {% if clue %}
+  <div class="alert alert-info mt-3">💡 Clue: {{ clue }}</div>
+  {% endif %}
+</div>
+
+{% endblock %}

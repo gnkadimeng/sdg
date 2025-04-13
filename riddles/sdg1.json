@@ -1,0 +1,62 @@
+[
+    {
+        "question": "I am a financial aid that ensures students from disadvantaged backgrounds can access higher education without the burden of fees. What am I?",
+        "answer": "bursary",
+        "clue": "Think of a grant or monetary assistance provided to support students' educational expenses.",
+        "image": "bursary.gif"
+    },
+    {
+        "question": "Many UJ students volunteer at this local hospital known for community healthcare efforts. What's its name?",
+        "answer": "helen joseph",
+        "clue": "It's named after a famous South African activist and located near UJ.",
+        "image": "hospital.gif"
+      },      
+    {
+        "question": "I represent the economic state where individuals lack the financial resources to meet basic living standards. What am I?",
+        "answer": "poverty",
+        "clue": "This term is the opposite of wealth and often measured by income levels.",
+        "image": "poverty.gif"
+    },
+    {
+        "question": "UJ students with great business ideas can pitch them for funding through this kind of support. What is it called?",
+        "answer": "startup funding",
+        "clue": "Think small business + money to grow.",
+        "image": "startup.gif"
+      },      
+    {
+        "question": "I am a global initiative comprising 17 goals, with the first aiming to eradicate poverty. What is this initiative called?",
+        "answer": "sustainable development goals",
+        "clue": "These goals were established by the United Nations in 2015.",
+        "image": "sdg_wheel.gif"
+    },
+    {
+        "question": "This kind of UJ policy helps guide research and action around poverty. What is it?",
+        "answer": "poverty policy",
+        "clue": "Two words: one about money problems, the other about rules.",
+        "image": "policy.gif"
+    },
+    {
+        "question": "UJ often works with local NGOs to improve community access to food, clinics, and more. What are these called?",
+        "answer": "access programmes",
+        "clue": "Think of programs that help people reach essential services.",
+        "image": "community.gif"
+      },      
+    {
+        "question": "This term describes the minimum amount of income needed for an individual to meet basic needs. Crossing below this line signifies poverty. What is it called?",
+        "answer": "poverty line",
+        "clue": "It's often referred to as the 'poverty ______.'",
+        "image": "line.gif"
+    },
+    {
+        "question": "UJ gives extra support to students from the poorest backgrounds. What is this called?",
+        "answer": "quintile support",
+        "clue": "It’s aimed at students in the lowest income group.",
+        "image": "support.gif"
+    },      
+    {
+        "question": "I am a UJ report that provides a condensed overview of the university's initiatives and progress towards each of the 17 Sustainable Development Goals. What is this report called?",
+        "answer": "sdg report",
+        "clue": "It's an annual publication focusing on SDG achievements.",
+        "image": "report.gif"
+    }
+]

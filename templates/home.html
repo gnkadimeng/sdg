@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Home | SDG Escape Room{% endblock %}
+{% block content %}
+<div class="text-center py-5">
+  <img src="{{ url_for('static', filename='img/Logo.png') }}" alt="Logo" class="mb-4" style="max-height: 200px;">
+  <h1 class="display-4 fw-bold text-dark">Welcome to the SDG Escape Room</h1>
+  <h3 class="lead mt-3">Solve riddles. Unlock knowledge. Help make the world a better place through the 17 Sustainable Development Goals.</h3>
+  <div class="mt-4">
+    <a href="{{ url_for('login') }}" class="btn btn-lg btn-primary">Get Started</a>
+  </div>
+</div>
+{% endblock %}

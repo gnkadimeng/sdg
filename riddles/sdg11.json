@@ -1,0 +1,62 @@
+[
+    {
+        "question": "I have walls filled with knowledge, open to all who seek. Within me, stories and information freely speak. What am I?",
+        "answer": "Library",
+        "clue": "This place on campus offers books, resources, and a quiet place to study.",
+        "image": "library.gif"
+    },
+    {
+        "question": "I am a space where art comes alive, showcasing culture and creativity's drive. Open to all, come rain or shine, what place am I, so divine?",
+        "answer": "Art Centre",
+        "clue": "This campus venue hosts exhibitions and celebrates artistic endeavors.",
+        "image": "art_gallery.gif"
+    },
+    {
+        "question": "I am green and open, a breath of fresh air, where students and locals gather without a care. What am I?",
+        "answer": "Fountain",
+        "clue": "This outdoor area on campus offers relaxation amidst nature.",
+        "image": "fountain.gif"
+    },
+    {
+        "question": "I capture the rain to nourish the land, a sustainable practice carefully planned. What system am I?",
+        "answer": "Rainwater Harvesting System",
+        "clue": "This method collects water for irrigation and reduces reliance on municipal supply.",
+        "image": "rainwater.gif"
+    },
+    {
+        "question": "I transport many without delay, reducing emissions along the way. What am I?",
+        "answer": "Electric Bus",
+        "clue": "This mode of transportation moves numerous passengers simultaneously, often using designated lanes.",
+        "image": "electric_vehicle.gif"
+    },
+    {
+        "question": "I light up the night with energy clean, atop buildings, I'm often seen. What am I?",
+        "answer": "Solar Panels",
+        "clue": "These panels convert sunlight into electricity, promoting renewable energy use.",
+        "image": "solar_panels.gif"
+    },
+    {
+        "question": "I am a pathway for those on foot, promoting health and a smaller carbon footprint. What am I?",
+        "answer": "Pedestrian Walkway",
+        "clue": "This designated area allows pedestrians to navigate the campus safely.",
+        "image": "pedestrian.gif"
+    },
+    {
+        "question": "In the digital realm, I stand tall, ensuring access and equity for all. I read aloud and magnify, so everyone can see the sky. What am I?",
+        "answer": "Screen reader",
+        "clue": "Think of software that assists those with visual impairments.",
+        "image": "screen_reader.gif"
+    },
+    {
+        "question": "I am a dwelling affordable and neat, providing shelter on a student street. What am I?",
+        "answer": "Student Residence",
+        "clue": "These accommodations offer reasonably priced living spaces for learners.",
+        "image": "student_residence.gif"
+    },
+    {
+        "question": "I am a report detailing goals and deeds, showcasing progress and community needs. What am I?",
+        "answer": "SDG Report",
+        "clue": "This document highlights the university's initiatives toward sustainable development.",
+        "image": "report.gif"
+    }
+]

@@ -1,0 +1,61 @@
+[
+    {
+        "question": "I breathe in what you exhale, but now I choke and grow pale. Without me, you'd have no air, yet I'm cut without a care.",
+        "answer": "Trees",
+        "clue": "I turn carbon dioxide into something you need to live.",
+        "image": "trees.gif"
+    },
+    {
+        "question": "I capture the sun to power your class, cutting emissions as you pass. On rooftops, I do my job, making fossil fuels start to sob. What am I?",
+        "answer": "Solar photovoltaic (PV) system",
+        "clue": "UJ uses me to reach its carbon-neutral goal by 2050.",
+        "image": "solar_pv_system.gif"
+    },
+    {
+        "question": "I take students from door to door, but I don't pollute or roar. Charged by the sun, I drive with pride, taking UJ's green journey in stride.",
+        "answer": "Electric bus",
+        "clue": "I'm part of UJ's sustainable mobility plan — clean and quiet!",
+        "image": "electric_bus.gif"
+    },
+    {
+        "question": "I'm invisible yet trap the heat, making summers hard to beat. Cars and factories fill the air, making climates less than fair.",
+        "answer": "Greenhouse gases",
+        "clue": "I create a 'blanket' around the Earth, making it hotter over time.",
+        "image": "greenhouse_gases.gif"
+    },
+    {   "question": "I keep the lights on, cool the air, and make UJ campuses more fair. I'm smart and save energy too — what tech am I, used across the U?",
+        "answer": "Energy-efficient technology",
+        "clue": "I include LED lights, motion sensors, and smart thermostats.",
+        "image": "energy_tech.gif"
+    },
+    {
+        "question": "From rivers to roads, I fill the seas, choking life with deadly ease. If you throw me where I should not go, I'll stick around, and it will show.",
+        "answer": "Plastic pollution",
+        "clue": "I take hundreds of years to break down, and I am found in the ocean.",
+        "image": "plastic_pollution.gif"
+    },
+    {
+        "question": "I'm small and light, two wheels in sight. I help you ride with climate pride. I need no fuel, just pedal might. What mode of travel am I, right?",
+        "answer": "Bicycle",
+        "clue": "UJ expanded my lanes and even lets you share me.",
+        "image": "bicycle_green_mobility.gif"
+    },
+    {
+        "question": "I'm a special space where waste's well-sorted. Plastic, paper, and food get reported. With me on campus, recycling soars — who am I, behind green doors?",
+        "answer": "Waste sorting station",
+        "clue": "UJ uses me to divert waste from landfills and boost recycling.",
+        "image": "sorting_station.gif"
+    },
+    {
+        "question": "Burn me once, I give you heat, burn me twice, I make you fleet. But burn me thrice, and you shall see, the planet chokes because of me.",
+        "answer": "Fossil fuels",
+        "clue": "I come from deep underground and power cars, factories, and homes.",
+        "image": "fossil_fuels.gif"
+    },
+    {
+        "question": "I digest your leftovers and garden scraps, turning them into green perhaps. I enrich soil and reduce the dump, bubbling beneath with a happy hump.",
+        "answer": "Composting bin",
+        "clue": "UJ uses me to handle organic waste and grow gardens.",
+        "image": "composting_bin.gif"
+    }
+]

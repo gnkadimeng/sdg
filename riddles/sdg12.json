@@ -1,0 +1,63 @@
+[
+    {
+      "question": "I’m a key part of UJ’s solar strategy, helping to reduce carbon emissions and power the campus sustainably. What system am I?",
+      "answer": "Solar photovoltaic (PV) system",
+      "clue": "UJ is aiming for carbon neutrality by 2050 — this renewable energy source is a big part of that plan.",
+      "image": "solar_pv_system.gif"
+    },
+    {
+      "question": "I help UJ track and control energy usage in buildings using smart tech. What am I?",
+      "answer": "Smart building technology",
+      "clue": "Think of automated systems that monitor lighting, temperature, and energy consumption.",
+      "image": "smart_building.gif"
+    },
+    {
+      "question": "I’m the on-campus effort where students and staff sort recyclables from general waste. What am I?",
+      "answer": "Waste sorting station",
+      "clue": "You’ll find me on campus helping UJ reach its recycling rate goals.",
+      "image": "waste_sorting_station.gif"
+    },
+    {
+      "question": "I reduce food and garden waste on campus by turning it into something useful for green spaces. What initiative am I?",
+      "answer": "Composting bins",
+      "clue": "These help feed UJ’s gardens with nutrient-rich waste.",
+      "image": "composting_bins.gif"
+    },
+    {
+      "question": "I’m a digital shift at UJ that cuts down on paper use in communication, learning, and admin. What practice am I?",
+      "answer": "Paperless initiatives",
+      "clue": "Think online books, digital documents, and fewer printouts.",
+      "image": "paperless_initiative.gif"
+    },
+    {
+      "question": "I’m UJ’s eco-friendly mode of student transport that runs without fuel. What am I?",
+      "answer": "Electric bus fleet",
+      "clue": "I’m quiet, green, and part of UJ’s sustainable mobility plan.",
+      "image": "electric_bus_fleet.gif"
+    },
+    {
+      "question": "I’m a spot on campus where you can power up your green ride. What facility am I?",
+      "answer": "EV charging station",
+      "clue": "You’ll find me wherever electric vehicles need energy.",
+      "image": "ev_charging_station.gif"
+    },
+    {
+      "question": "I’m a research partnership that helps UJ develop solutions for sustainability in cities and industries. What alliance am I?",
+      "answer": "Sustainability Research Alliance",
+      "clue": "This alliance brings researchers and industries together to tackle urban challenges.",
+      "image": "sustainability_research_alliance.gif"
+    },
+    {
+      "question": "I am the practical lesson in sustainability you get when you cycle to class. What am I?",
+      "answer": "Cycling as green mobility",
+      "clue": "This form of transport is both fitness-friendly and eco-conscious.",
+      "image": "cycling_green_mobility.gif"
+    },
+    {
+      "question": "I summarize how UJ contributes to the SDGs, including responsible production and consumption. What report am I?",
+      "answer": "UJ SDG Report",
+      "clue": "You’ll find me full of data, targets, and progress updates.",
+      "image": "uj_sdg_report.gif"
+    }
+  ]
+  

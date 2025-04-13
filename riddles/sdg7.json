@@ -1,0 +1,62 @@
+[
+    {
+        "question": "I rise each day to give you light, Harness me to set things right. What am I?",
+        "answer": "Sun",
+        "clue": "This natural source of energy can be harnessed using solar panels.",
+        "image": "sun.gif"
+    },
+    {
+        "question": "Turn my blades to feel the breeze, Generating power with such ease. What am I?",
+        "answer": "Turbine",
+        "clue": "This device uses wind to generate electricity.",
+        "image": "wind_turbine.gif"
+    },
+    {
+        "question": "I flow unseen to power your home, From coal or sun, through wires I roam. What am I?",
+        "answer": "Electricity",
+        "clue": "This invisible force powers your home when you plug in devices.",
+        "image": "electricity.gif"
+    },
+    {
+        "question": "I'm a bulb that's smart and bright, Using less to give you light. What am I?",
+        "answer": "LED Bulb",
+        "clue": "This energy-efficient lighting option uses less power to provide the same light.",
+        "image": "led_bulb.gif"
+    },
+    {
+        "question": "I heat your shower with less demand, by pulling warmth from air or land. I replaced old heaters that cost a ton—what am I that gets the job done?",
+        "answer": "Heat Pump",
+        "clue": "UJ installed these in student residences to reduce electricity use.",
+        "image": "heat_pump.gif"
+    },    
+    {
+        "question": "In busy halls I spring to life, saving power and ending strife. I turn off when the crowd is gone—what sensor keeps the lights off too long?",
+        "answer": "Motion Sensors",
+        "clue": "These are placed in high-traffic areas so lights only work when someone’s there.",
+        "image": "motion_sensors.gif"
+    },    
+    {
+        "question": "Charge me up; I store the sun, Powering devices when day is done. What am I?",
+        "answer": "Solar Battery",
+        "clue": "This stores solar energy to be used later, especially when the sun isn't shining.",
+        "image": "solar_battery.gif"
+    },
+    {
+        "question": "Four wheels I have, but fuel I lack, Plug me in to stay on track. What am I?",
+        "answer": "Electric Bus",
+        "clue": "This type of vehicle runs on electricity instead of gasoline.",
+        "image": "electric_vehicle.gif"
+    },
+    {
+        "question": "Though water is my main concern, I help when lights no longer burn. At APK, I stand quite tall. What am I that helps UJ through it all?",
+        "answer": "Water Reservoir",
+        "clue": "Installed at APK to supply water even when power is down.",
+        "image": "water.gif"
+    },    
+    {
+        "question": "UJ's pledge to the community, Promoting energy with unity. What program am I?",
+        "answer": "Renewable Energy",
+        "clue": "UJ is actively promoting the use of renewable energy sources to students and the community.",
+        "image": "renewable_energy.gif"
+    }
+]

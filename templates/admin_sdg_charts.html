@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% block title %}SDG Stats - Charts{% endblock %}
+{% block content %}
+<div class="container mt-5">
+  <h2 class="text-center mb-4">📊 SDG Engagement Summary</h2>
+
+  <div class="table-responsive mb-5">
+    <table class="table table-bordered table-striped table-hover">
+      <thead class="table-dark">
+        <tr>
+          <th>SDG Number</th>
+          <th>Total Views</th>
+          <th>Total Plays</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for i in range(labels|length) %}
+        <tr>
+          <td>{{ labels[i] }}</td>
+          <td>{{ views[i] }}</td>
+          <td>{{ plays[i] }}</td>
+        </tr>
+        {% else %}
+        <tr>
+          <td colspan="3" class="text-center text-muted">No engagement data available.</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <canvas id="viewsChart"></canvas>
+    </div>
+    <div class="col-md-6">
+      <canvas id="playsChart"></canvas>
+    </div>
+  </div>
+
+  <div class="text-center mt-4">
+    <a href="{{ url_for('admin_dashboard') }}" class="btn btn-outline-secondary">⬅ Back to Dashboard</a>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  const labels = {{ labels | tojson }};
+  const viewsData = {{ views | tojson }};
+  const playsData = {{ plays | tojson }};
+
+  const viewsChart = new Chart(document.getElementById('viewsChart'), {
+    type: 'bar',
+    data: {
+      labels: labels,
+      datasets: [{
+        label: 'Views per SDG',
+        data: viewsData,
+        backgroundColor: 'rgba(54, 162, 235, 0.7)',
+        borderColor: 'rgba(54, 162, 235, 1)',
+        borderWidth: 1
+      }]
+    },
+    options: {
+      responsive: true,
+      scales: {
+        y: { beginAtZero: true }
+      }
+    }
+  });
+
+  const playsChart = new Chart(document.getElementById('playsChart'), {
+    type: 'bar',
+    data: {
+      labels: labels,
+      datasets: [{
+        label: 'Plays per SDG',
+        data: playsData,
+        backgroundColor: 'rgba(255, 99, 132, 0.7)',
+        borderColor: 'rgba(255, 99, 132, 1)',
+        borderWidth: 1
+      }]
+    },
+    options: {
+      responsive: true,
+      scales: {
+        y: { beginAtZero: true }
+      }
+    }
+  });
+</script>
+{% endblock %}

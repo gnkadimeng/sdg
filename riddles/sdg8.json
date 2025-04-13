@@ -1,0 +1,62 @@
+[
+    {
+        "question": "I ensure fair compensation for all, preventing poverty's call. What am I?",
+        "answer": "Living wage",
+        "clue": "Think of a wage that meets basic living standards.",
+        "image": "living_wage.gif"
+    },
+    {
+        "question": "I'm a policy that fights against forced labor and human trafficking within our labor force. What am I?",
+        "answer": "Employment modern slavery policy",
+        "clue": "UJ has a specific policy addressing this issue.",
+        "image": "modern_slavery.gif"
+    },
+    {
+        "question": "I represent the collective voice of workers, advocating for rights and fair conditions. What am I?",
+        "answer": "Unions",
+        "clue": "These organizations often negotiate on behalf of employees.",
+        "image": "unions.gif"
+    },
+    {
+        "question": "Ensuring all have equal job opportunities, regardless of background or identity. What policy am I?",
+        "answer": "Employment non-discrimination policy",
+        "clue": "This policy promotes fairness in hiring and workplace practices.",
+        "image": "employment_discrimination.gif"
+    },
+    {
+        "question": "I ensure that even those not directly employed by an organization receive fair treatment and rights. What policy am I?",
+        "answer": "Employment equivalent rights of outsourced workers policy",
+        "clue": "This policy pertains to workers hired through third-party agencies.",
+        "image": "outsourced_workers.gif"
+    },
+    {
+        "question": "I track and ensure fairness in pay across all levels of an organization. What practice am I?",
+        "answer": "Employment pay scale equity tracking",
+        "clue": "This practice addresses disparities in compensation.",
+        "image": "pay_scale.gif"
+    },
+    {
+        "question": "I'm a process that allows employees to challenge unfair treatment or decisions. What am I?",
+        "answer": "Employment practice appeal process",
+        "clue": "This process provides a formal way to contest workplace issues.",
+        "image": "appeal_process.gif"
+    },
+    {
+        "question": "I ensure that all workers, regardless of their employment status, have their rights protected. What practice am I?",
+        "answer": "Employment practice labor rights",
+        "clue": "This practice safeguards the rights of temporary or part-time workers.",
+        "image": "labor_rights.gif"
+    },
+    {
+        "question": "I am a policy that ensures employees are compensated for extra hours worked beyond their regular schedule. What am I?",
+        "answer": "Overtime compensation policy",
+        "clue": "This policy pertains to payment for additional work hours.",
+        "image": "overtime.gif"
+    },
+    {
+        "question": "I'm a framework that balances teaching, research, and community engagement responsibilities for academic staff. What model am I?",
+        "answer": "Academic workload model",
+        "clue": "This model helps distribute workload fairly among university faculty.",
+        "image": "workload.gif"
+    }
+]

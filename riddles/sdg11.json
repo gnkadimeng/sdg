@@ -2,60 +2,70 @@
     {
         "question": "I have walls filled with knowledge, open to all who seek. Within me, stories and information freely speak. What am I?",
         "answer": "Library",
+        "options": ["Library", "Knowledge Centre", "UJ Learning Hub"],
         "clue": "This place on campus offers books, resources, and a quiet place to study.",
         "image": "library.gif"
     },
     {
         "question": "I am a space where art comes alive, showcasing culture and creativity's drive. Open to all, come rain or shine, what place am I, so divine?",
         "answer": "Art Centre",
+        "options": ["Art Centre", "Art Gallery", "UJ Exhibition Hall"],
         "clue": "This campus venue hosts exhibitions and celebrates artistic endeavors.",
         "image": "art_gallery.gif"
     },
     {
         "question": "I am green and open, a breath of fresh air, where students and locals gather without a care. What am I?",
         "answer": "Fountain",
+        "options": ["Fountain", "UJ Park", "Green Courtyard"],
         "clue": "This outdoor area on campus offers relaxation amidst nature.",
         "image": "fountain.gif"
     },
     {
         "question": "I capture the rain to nourish the land, a sustainable practice carefully planned. What system am I?",
         "answer": "Rainwater Harvesting System",
+        "options": ["Rainwater Harvesting System", "Water Collection Tank", "Rain Catcher"],
         "clue": "This method collects water for irrigation and reduces reliance on municipal supply.",
         "image": "rainwater.gif"
     },
     {
         "question": "I transport many without delay, reducing emissions along the way. What am I?",
         "answer": "Electric Bus",
+        "options": ["Electric Bus", "e-Bus", "Battery Shuttle"],
         "clue": "This mode of transportation moves numerous passengers simultaneously, often using designated lanes.",
         "image": "electric_vehicle.gif"
     },
     {
         "question": "I light up the night with energy clean, atop buildings, I'm often seen. What am I?",
         "answer": "Solar Panels",
+        "options": ["Solar Panels", "Photovoltaic Array", "Rooftop Solar"],
         "clue": "These panels convert sunlight into electricity, promoting renewable energy use.",
         "image": "solar_panels.gif"
     },
     {
         "question": "I am a pathway for those on foot, promoting health and a smaller carbon footprint. What am I?",
         "answer": "Pedestrian Walkway",
+        "options": ["Pedestrian Walkway", "Campus Walkway", "Footpath"],
         "clue": "This designated area allows pedestrians to navigate the campus safely.",
         "image": "pedestrian.gif"
     },
     {
         "question": "In the digital realm, I stand tall, ensuring access and equity for all. I read aloud and magnify, so everyone can see the sky. What am I?",
         "answer": "Screen reader",
+        "options": ["Screen reader", "Text-to-speech software", "Accessibility software"],
         "clue": "Think of software that assists those with visual impairments.",
         "image": "screen_reader.gif"
     },
     {
         "question": "I am a dwelling affordable and neat, providing shelter on a student street. What am I?",
         "answer": "Student Residence",
+        "options": ["Student Residence", "Campus Housing", "UJ Dormitory"],
         "clue": "These accommodations offer reasonably priced living spaces for learners.",
         "image": "student_residence.gif"
     },
     {
         "question": "I am a report detailing goals and deeds, showcasing progress and community needs. What am I?",
         "answer": "SDG Report",
+        "options": ["SDG Report", "Sustainability Report", "UJ SDG Summary"],
         "clue": "This document highlights the university's initiatives toward sustainable development.",
         "image": "report.gif"
     }

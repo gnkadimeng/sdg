@@ -1,61 +1,71 @@
 [
     {
-        "question": "I beat without rest, yet I never complain. If I stop, you'll feel the pain. What am I?",
-        "answer": "the heart",
-        "clue": "Doctors listen to me closely; if I stop, life stops.",
-        "image": "heart.gif"
+        "question": "Many UJ students volunteer at this local hospital known for community healthcare efforts. What's its name?",
+        "answer": "Helen Joseph Hospital",
+        "options": ["Helen Joseph Hospital", "Baragwanath Hospital (Bara)", "Charlotte Maxeke Hospital"],
+        "clue": "It's named after a famous South African activist and located near UJ.",
+        "image": "helen_joseph_hospital.gif"
     },
     {
         "question": "I am a UJ initiative that raises awareness about healthy eating and lifestyle choices. What is my name?",
         "answer": "UJ Health and Wellness Campaign",
+        "options": ["UJ Health and Wellness Campaign", "Healthy Campus Campaign", "UJ Nutrition Drive"],
         "clue": "This campaign educates students on maintaining a balanced lifestyle.",
         "image": "uj_health_wellness.gif"
     },
     {
-        "question": "I fight off germs, yet I am not seen. I help you heal and keep you clean. What am I?",
-        "answer": "the immune system",
-        "clue": "Your body's defense against disease-causing organisms.",
-        "image": "immune_system.gif"
+        "question": "With cheers and races, I come alive. UJ athletes train and strive. Track and field, rugby, soccer too - I host the games that push you through. What am I?",
+        "answer": "UJ Stadium",
+        "options": ["UJ Stadium", "UJ Sports Ground", "UJ Track and Field"],
+        "clue": "Found at UJ campuses like APK and Soweto, I’m where students gather for matches, fitness, and training.",
+        "image": "uj_stadium.gif"
     },
     {
         "question": "I am a UJ initiative that focuses on mental health support for students. What is my name?",
         "answer": "UJ Mental Health Services",
+        "options": ["UJ Mental Health Services", "Psycad", "UJ Counselling"],
         "clue": "This service provides counseling and mental wellness programs.",
         "image": "uj_mental_health.gif"
     },
     {
-        "question": "I am the practice of cultivating crops and raising animals in ways that meet current needs without compromising future generations. What am I?",
-        "answer": "sustainable agriculture",
-        "clue": "This method allows farming that does not harm the environment or deplete resources.",
-        "image": "sustainable_agriculture.gif"
+        "question": "I am a regular UJ campus event where students check their health - blood pressure, HIV status, glucose, and more. What am I?",
+        "answer": "UJ Health Screening",
+        "options": ["UJ Health Screening", "UJ Wellness Day", "Campus Health Check"],
+        "clue": "A free health screening event organized by UJ health services to keep students informed and healthy.",
+        "image": "uj_health_screening.gif"
     },
     {
-        "question": "I am the invisible force that keeps you breathing. Without me, you can't live. What am I?",
-        "answer": "oxygen",
-        "clue": "I’m essential to your cells and come from the air you breathe.",
-        "image": "oxygen.gif"
+        "question": "I am the UJ space where students work out, lift weights, or join fitness classes - all to boost mental and physical well-being. What am I?",
+        "answer": "UJ Gym",
+        "options": ["UJ Gym", "Campus Gym", "UJ Fitness Center"],
+        "clue": "A facility where students exercise to stay fit and healthy.",
+        "image": "uj_gym.gif"
     },
     {
         "question": "I am a UJ program that provides free healthcare services to students in need. What is my name?",
         "answer": "UJ Student Health Service",
+        "options": ["UJ Student Health Service", "Campus Health", "UJ Medical Clinic"],
         "clue": "This program provides medical care to students at no cost.",
         "image": "uj_student_health_service.gif"
     },
     {
         "question": "I am a global goal aiming to promote health and well-being for all ages. What am I?",
         "answer": "SDG 3: Good Health and Well-being",
+        "options": ["SDG 3: Good Health and Well-being", "Health Goal", "Well-being Goal"],
         "clue": "This goal focuses on ensuring health care access for everyone, everywhere.",
         "image": "sdg3.gif"
     },
     {
         "question": "I help you move your muscles and keep your body fit. What am I?",
         "answer": "exercise",
+        "options": ["exercise", "physical activity", "workout"],
         "clue": "Engaging in regular physical activity is key to a healthy life.",
         "image": "exercise.gif"
     },
     {
         "question": "I am a UJ program that encourages students to get vaccinated and prevent the spread of disease. What is my name?",
         "answer": "UJ Vaccination Campaign",
+        "options": ["UJ Vaccination Campaign", "UJ Immunization Drive", "Vaccine Awareness Program"],
         "clue": "This initiative focuses on educating students about the importance of vaccinations.",
         "image": "uj_vaccination_campaign.gif"
     }

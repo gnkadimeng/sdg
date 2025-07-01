@@ -21,16 +21,26 @@
   {% endif %}
 
   <h5 class="mb-3">🧩 Riddle {{ index }}</h5>
-  <p class="lead">{{ riddle.question }}</p>
+  <p class="lead mb-4">{{ riddle.question }}</p>
 
   {% if message %}
   <div class="alert alert-warning">{{ message }}</div>
   {% endif %}
 
   <form method="POST">
+    <!-- Option buttons -->
+    <div class="mb-4 option-grid">
+      {% for option in riddle.options %}
+      <button type="button" class="btn option-btn" onclick="selectOption(this)" 
+              data-option="{{ option }}">
+        {{ option }}
+      </button>
+      {% endfor %}
+    </div>
+    
     <div class="input-group mb-3">
-      <input type="text" class="form-control" name="answer" placeholder="Type your answer..." required>
-      <button class="btn btn-primary" type="submit">
+      <input type="text" class="form-control" name="answer" id="answerInput" placeholder="Type your answer..." required>
+      <button class="btn btn-success" type="submit">
         {% if is_last_question %}
           Final Submit 🏁
         {% else %}
@@ -45,5 +55,63 @@
   <div class="alert alert-info mt-3">💡 Clue: {{ clue }}</div>
   {% endif %}
 </div>
+
+<script>
+  function selectOption(button) {
+    // Remove active class from all buttons
+    document.querySelectorAll('.option-btn').forEach(btn => {
+      btn.classList.remove('active', 'btn-primary');
+      btn.classList.add('btn-outline-primary');
+    });
+    
+    // Add active class to selected button
+    button.classList.remove('btn-outline-primary');
+    button.classList.add('active', 'btn-primary');
+    
+    // Set the selected option as the input value
+    document.getElementById('answerInput').value = button.dataset.option;
+  }
+</script>
+
+<style>
+  .option-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 12px;
+  }
+  
+  .option-btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 2px solid #0d6efd;
+    color: #0d6efd;
+    background-color: white;
+    transition: all 0.2s ease;
+    text-align: center;
+    white-space: normal;
+    word-wrap: break-word;
+  }
+  
+  .option-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background-color: #f8f9fa;
+  }
+  
+  .option-btn.active,
+  .option-btn:active {
+    background-color: #0d6efd;
+    color: white;
+    border-color: #0d6efd;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  @media (max-width: 576px) {
+    .option-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
 
 {% endblock %}

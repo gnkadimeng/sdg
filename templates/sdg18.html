@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SDG 18 Puzzle Game</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: linear-gradient(135deg, #0f336000, #0f336000, #0f336000);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #FFFFFF;
+            position: relative;
+        }
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 4px;
+            background: linear-gradient(90deg, #FF8200, #FFA500, #FF8200);
+            border-radius: 2px;
+        }
+        .header h1 {
+            font-size: 3em;
+            margin: 20px 0 10px 0;
+            text-shadow: 0 0 20px rgba(255, 130, 0, 0.5);
+            background: linear-gradient(135deg, #FF8200, #FFA500);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        @keyframes glow {
+            from { text-shadow: 0 0 20px rgba(255, 130, 0, 0.5); }
+            to { text-shadow: 0 0 30px rgba(255, 130, 0, 0.8), 0 0 40px rgba(255, 130, 0, 0.3); }
+        }
+        .header p {
+            font-size: 1.3em;
+            margin: 10px 0;
+            color: #B8E6FF;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        .game-container {
+            position: relative;
+            width: 480px;
+            height: 480px;
+            margin: 20px;
+            background: linear-gradient(135deg, #0f336000, #0f336000);
+            border-radius: 25px;
+            box-shadow: 
+                0 20px 40px rgba(0,0,0,0.6),
+                inset 0 0 0 3px rgba(255, 130, 0, 0.3),
+                0 0 60px rgba(255, 130, 0, 0.2);
+            padding: 20px;
+            border: 2px solid rgba(255, 130, 0, 0.4);
+        }
+        .puzzle-grid {
+            position: relative;
+            width: 440px;
+            height: 440px;
+            background: linear-gradient(135deg, #0f336000, #0f336000);
+            border-radius: 15px;
+            padding: 5px;
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
+        }
+        .tile {
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+            font-weight: bold;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: absolute;
+            width: 140px;
+            height: 140px;
+            border: 2px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 
+                0 8px 16px rgba(0,0,0,0.3),
+                inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+            overflow: hidden;
+            background-size: 430px 430px;
+            color: rgba(255, 255, 255, 0.9);
+            text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+            backdrop-filter: blur(10px);
+        }
+        .tile::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent);
+            pointer-events: none;
+        }
+        .tile:hover {
+            transform: scale(1.08) translateZ(0);
+            box-shadow: 
+                0 12px 24px rgba(0,0,0,0.4),
+                0 0 30px rgba(255, 130, 0, 0.4),
+                inset 0 0 0 2px rgba(255, 130, 0, 0.6);
+            z-index: 2;
+            border-color: rgba(255, 130, 0, 0.8);
+        }
+        .tile:active {
+            transform: scale(1.02) translateZ(0);
+            transition: all 0.1s ease;
+        }
+        .empty {
+            background: linear-gradient(135deg, #003D4F, #00788C);
+            box-shadow: 
+                inset 0 0 30px rgba(0,0,0,0.6),
+                inset 0 0 0 3px rgba(255, 130, 0, 0.3);
+            border: 3px dashed rgba(255, 130, 0, 0.5);
+            animation: pulse 2s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { 
+                border-color: rgba(255, 130, 0, 0.3);
+                box-shadow: inset 0 0 30px rgba(0,0,0,0.6), inset 0 0 0 3px rgba(255, 130, 0, 0.3);
+            }
+            50% { 
+                border-color: rgba(255, 130, 0, 0.7);
+                box-shadow: inset 0 0 30px rgba(0,0,0,0.6), inset 0 0 0 3px rgba(255, 130, 0, 0.7);
+            }
+        }
+        .controls {
+            display: flex;
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+        button {
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #FF8200, #FFA500);
+            border: none;
+            border-radius: 12px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            font-size: 16px;
+            font-weight: bold;
+            box-shadow: 
+                0 6px 12px rgba(255, 130, 0, 0.3),
+                inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s;
+        }
+        button:hover::before {
+            left: 100%;
+        }
+        button:hover {
+            background: linear-gradient(135deg, #00788C, #0099B3);
+            transform: translateY(-3px);
+            box-shadow: 
+                0 10px 20px rgba(0, 120, 140, 0.4),
+                inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+        }
+        button:active {
+            transform: translateY(-1px);
+        }
+        .stats {
+            margin-top: 30px;
+            display: flex;
+            gap: 50px;
+            color: #FFFFFF;
+            font-size: 20px;
+            font-weight: bold;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        .stat-item {
+            background: linear-gradient(135deg, rgba(255, 130, 0, 0.2), rgba(0, 120, 140, 0.2));
+            padding: 12px 20px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 130, 0, 0.3);
+            backdrop-filter: blur(10px);
+        }
+        .win-message {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: linear-gradient(135deg, #003D4F, #00788C);
+            color: white;
+            padding: 40px 60px;
+            border-radius: 20px;
+            text-align: center;
+            display: none;
+            z-index: 10;
+            box-shadow: 
+                0 20px 40px rgba(0,0,0,0.8),
+                inset 0 0 0 3px rgba(255, 130, 0, 0.5);
+            border: 3px solid #FF8200;
+            animation: winAnimation 0.5s ease-out;
+        }
+        @keyframes winAnimation {
+            0% { transform: translate(-50%, -50%) scale(0.8); opacity: 0; }
+            100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+        }
+        .win-message h2 {
+            color: #FF8200;
+            font-size: 2.5em;
+            margin: 0 0 15px 0;
+            text-shadow: 0 0 20px rgba(255, 130, 0, 0.5);
+        }
+        .win-message p {
+            font-size: 1.2em;
+            margin: 10px 0;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        .solved-overlay {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 440px;
+            height: 440px;
+            display: none;
+            z-index: 5;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 0 30px rgba(255, 130, 0, 0.6);
+        }
+        .solved-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+            opacity: 0.95;
+        }
+        .difficulty-selector {
+            margin-bottom: 30px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        .difficulty-selector label {
+            color: #FFFFFF;
+            font-weight: bold;
+            font-size: 18px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        .difficulty-selector select {
+            padding: 12px 16px;
+            border: 2px solid #FF8200;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #2a2a3e, #1a1a2e);
+            color: #FFFFFF;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .difficulty-selector select:hover {
+            border-color: #FFA500;
+            box-shadow: 0 0 15px rgba(255, 130, 0, 0.3);
+        }
+        .difficulty-selector select:focus {
+            outline: none;
+            border-color: #FFA500;
+            box-shadow: 0 0 20px rgba(255, 130, 0, 0.5);
+        }
+        @keyframes celebration {
+            0% { transform: scale(1) rotate(0deg); }
+            25% { transform: scale(1.15) rotate(3deg); }
+            50% { transform: scale(1.25) rotate(-3deg); }
+            75% { transform: scale(1.15) rotate(3deg); }
+            100% { transform: scale(1) rotate(0deg); }
+        }
+        .celebrate {
+            animation: celebration 0.8s ease-in-out;
+            box-shadow: 0 0 30px rgba(255, 130, 0, 0.8) !important;
+        }
+        .tile.connecting {
+            box-shadow: 
+                0 0 20px rgba(255, 130, 0, 0.8),
+                inset 0 0 0 2px rgba(255, 130, 0, 0.6);
+            border-color: rgba(255, 130, 0, 0.9);
+        }
+        .game-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 20%, rgba(255, 130, 0, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(0, 120, 140, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+            border-radius: 25px;
+            animation: shimmer 3s ease-in-out infinite;
+        }
+        @keyframes shimmer {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.7; }
+        }
+        @media (max-width: 600px) {
+            .game-container {
+                width: 90vw;
+                height: 90vw;
+                max-width: 400px;
+                max-height: 400px;
+                padding: 15px;
+            }
+            .puzzle-grid {
+                width: calc(100% - 10px);
+                height: calc(100% - 10px);
+            }
+            .tile {
+                width: calc(33.333% - 10px);
+                height: calc(33.333% - 10px);
+                font-size: 14px;
+            }
+            .header h1 {
+                font-size: 2.2em;
+            }
+            .controls {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .stats {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>SDG 18 Puzzle Challenge</h1>
+        <p>Reconstruct the University Logo</p>
+    </div>
+
+    <div class="difficulty-selector">
+        <label for="difficulty">Difficulty:</label>
+        <select id="difficulty">
+            <option value="easy">Easy (100 shuffles)</option>
+            <option value="medium" selected>Medium (300 shuffles)</option>
+            <option value="hard">Hard (500 shuffles)</option>
+        </select>
+    </div>
+
+    <div class="controls">
+        <button onclick="shuffleTiles()">🔄 New Game</button>
+        <button id="glueButton" onmousedown="showSolution()" onmouseup="hideSolution()">👁️ Peek Solution</button>
+    </div>
+
+    <div class="game-container">
+        <div class="puzzle-grid" id="puzzleGrid"></div>
+        <div class="solved-overlay" id="solvedOverlay">
+            <img src="{{ url_for('static', filename='img/uj.png') }}" class="solved-image" alt="UJ Logo Solution">
+        </div>
+        <div class="win-message" id="winMessage">
+            <h2>🎉 Congratulations! 🎉</h2>
+            <p>You've assembled the UJ logo!</p>
+            <p>Go Orange and Blue! 🧡💙</p>
+        </div>
+    </div>
+
+    <div class="stats">
+        <div class="stat-item">📊 Moves: <span id="moveCount">0</span></div>
+        <div class="stat-item">⏱️ Time: <span id="timer">0</span>s</div>
+    </div>
+
+    <script>
+        let tiles = [];
+        let emptyIndex = 8;
+        let moveCount = 0;
+        let timer = 0;
+        let timerInterval;
+        let gameStarted = false;
+
+        const pieceClasses = [
+            'piece1', 'piece2', 'piece3', 'piece4', 
+            'piece5', 'piece6', 'piece7', 'piece8'
+        ];
+
+        const tileBackgroundPositions = [
+            '5px 5px',    // Top-left
+            '-137px 5px', // Top-middle
+            '-279px 5px', // Top-right
+            '5px -137px', // Middle-left
+            '-137px -137px', // Center
+            '-279px -137px', // Middle-right
+            '5px -279px', // Bottom-left
+            '-137px -279px'  // Bottom-middle
+        ];
+
+        function createTiles() {
+            const puzzleGrid = document.getElementById('puzzleGrid');
+            puzzleGrid.innerHTML = '';
+            tiles = [];
+            
+            for (let i = 0; i < 9; i++) {
+                if (i < 8) {
+                    const tile = document.createElement('div');
+                    tile.className = `tile ${pieceClasses[i]}`;
+                    tile.textContent = `${i + 1}`;
+                    tile.dataset.index = i;
+                    tile.dataset.originalIndex = i;
+                    tile.addEventListener('click', moveTile);
+                    
+                    tile.style.backgroundImage = `url("{{ url_for('static', filename='img/uj.png') }}")`;
+                    tile.style.backgroundPosition = tileBackgroundPositions[i];
+                    tile.style.backgroundRepeat = 'no-repeat';
+                    
+                    tiles.push(tile);
+                } else {
+                    const emptyTile = document.createElement('div');
+                    emptyTile.className = 'tile empty';
+                    emptyTile.dataset.index = i;
+                    tiles.push(emptyTile);
+                }
+            }
+            
+            tiles.forEach((tile, index) => {
+                const row = Math.floor(index / 3);
+                const col = index % 3;
+                tile.style.left = `${col * 143 + 5}px`;
+                tile.style.top = `${row * 143 + 5}px`;
+                tile.dataset.index = index;
+                puzzleGrid.appendChild(tile);
+            });
+        }
+
+        function moveTile(e) {
+            if (!gameStarted) {
+                startTimer();
+                gameStarted = true;
+            }
+
+            const clickedIndex = parseInt(e.target.dataset.index);
+            const row = Math.floor(clickedIndex / 3);
+            const col = clickedIndex % 3;
+            const emptyRow = Math.floor(emptyIndex / 3);
+            const emptyCol = emptyIndex % 3;
+
+            if ((Math.abs(row - emptyRow) === 1 && col === emptyCol) ||
+                (Math.abs(col - emptyCol) === 1 && row === emptyRow)) {
+                
+                e.target.classList.add('connecting');
+                setTimeout(() => e.target.classList.remove('connecting'), 300);
+                
+                e.target.classList.add('celebrate');
+                setTimeout(() => e.target.classList.remove('celebrate'), 800);
+                
+                [tiles[clickedIndex], tiles[emptyIndex]] = [tiles[emptyIndex], tiles[clickedIndex]];
+                
+                tiles.forEach((tile, index) => {
+                    const newRow = Math.floor(index / 3);
+                    const newCol = index % 3;
+                    tile.style.left = `${newCol * 143 + 5}px`;
+                    tile.style.top = `${newRow * 143 + 5}px`;
+                    tile.dataset.index = index;
+                });
+
+                emptyIndex = clickedIndex;
+                moveCount++;
+                document.getElementById('moveCount').textContent = moveCount;
+                
+                checkWin();
+            }
+        }
+
+        function checkWin() {
+            const isSolved = tiles.every((tile, index) => {
+                if (tile.className.includes('empty')) {
+                    return index === 8;
+                }
+                return parseInt(tile.dataset.originalIndex) === index;
+            });
+            
+            if (isSolved) {
+                clearInterval(timerInterval);
+                document.getElementById('winMessage').style.display = 'block';
+                gameStarted = false;
+                
+                tiles.forEach((tile, index) => {
+                    if (!tile.className.includes('empty')) {
+                        setTimeout(() => {
+                            tile.classList.add('celebrate');
+                            tile.classList.add('connecting');
+                            setTimeout(() => {
+                                tile.classList.remove('celebrate');
+                                tile.classList.remove('connecting');
+                            }, 800);
+                        }, index * 150);
+                    }
+                });
+            }
+        }
+
+        function shuffleTiles() {
+            clearInterval(timerInterval);
+            moveCount = 0;
+            timer = 0;
+            gameStarted = false;
+            document.getElementById('moveCount').textContent = '0';
+            document.getElementById('timer').textContent = '0';
+            document.getElementById('winMessage').style.display = 'none';
+
+            const difficulty = document.getElementById('difficulty').value;
+            let shuffleCount = 300;
+            
+            switch(difficulty) {
+                case 'easy': shuffleCount = 100; break;
+                case 'medium': shuffleCount = 300; break;
+                case 'hard': shuffleCount = 500; break;
+            }
+
+            for (let i = 0; i < shuffleCount; i++) {
+                const validMoves = [];
+                const emptyRow = Math.floor(emptyIndex / 3);
+                const emptyCol = emptyIndex % 3;
+
+                if (emptyRow > 0) validMoves.push(emptyIndex - 3);
+                if (emptyRow < 2) validMoves.push(emptyIndex + 3);
+                if (emptyCol > 0) validMoves.push(emptyIndex - 1);
+                if (emptyCol < 2) validMoves.push(emptyIndex + 1);
+
+                const randomMove = validMoves[Math.floor(Math.random() * validMoves.length)];
+                [tiles[emptyIndex], tiles[randomMove]] = [tiles[randomMove], tiles[emptyIndex]];
+                emptyIndex = randomMove;
+            }
+
+            tiles.forEach((tile, index) => {
+                const row = Math.floor(index / 3);
+                const col = index % 3;
+                tile.style.left = `${col * 143 + 5}px`;
+                tile.style.top = `${row * 143 + 5}px`;
+                tile.dataset.index = index;
+            });
+        }
+
+        function startTimer() {
+            timerInterval = setInterval(() => {
+                timer++;
+                document.getElementById('timer').textContent = timer;
+            }, 1000);
+        }
+
+        function showSolution() {
+            document.getElementById('solvedOverlay').style.display = 'block';
+        }
+
+        function hideSolution() {
+            document.getElementById('solvedOverlay').style.display = 'none';
+        }
+
+        createTiles();
+        shuffleTiles();
+    </script>
+</body>
+</html>

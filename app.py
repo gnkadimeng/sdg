@@ -332,56 +332,146 @@ def learn_sdg(sdg_id):
 
 @app.route('/sdg/<int:sdg_num>', methods=['GET', 'POST'])
 def sdg_quiz(sdg_num):
+    # Special handling for SDG 18 (Puzzle Game)
+    if sdg_num == 18:
+        # Reset session for SDG 18
+        if session.get('sdg_num') != sdg_num:
+            session['sdg_num'] = sdg_num
+            session.pop('riddle_index', None)
+            session.pop('clues_used', None)
+            
+            # Log activity if user is logged in
+            if 'user_id' in session:
+                try:
+                    conn = get_db_connection()
+                    cur = conn.cursor()
+                    cur.execute(
+                        "INSERT INTO sdg_activity (user_id, sdg_id, action) VALUES (%s, %s, 'play')",
+                        (session['user_id'], sdg_num)
+                    )
+                    conn.commit()
+                    cur.close()
+                    conn.close()
+                except Exception as e:
+                    print(f"Activity log error (play): {e}")
+
+        return render_template('sdg18.html')  # Render puzzle template
+
+    # Existing logic for other SDGs (1-17)
     riddle_path = os.path.join('riddles', f'sdg{sdg_num}.json')
     if not os.path.exists(riddle_path):
         flash("Riddle file not found.", "danger")
         return redirect(url_for('dashboard'))
 
-    with open(riddle_path, 'r') as file:
-        riddles = json.load(file)
+    try:
+        with open(riddle_path, 'r', encoding='utf-8') as file:
+            riddles = json.load(file)
+    except UnicodeDecodeError:
+        with open(riddle_path, 'r', encoding='latin-1') as file:
+            riddles = json.load(file)
+    except Exception as e:
+        flash(f"Error reading riddle file: {str(e)}", "danger")
+        return redirect(url_for('dashboard'))
 
+    # Handle both list and dictionary formats
+    if isinstance(riddles, dict):
+        riddles_list = list(riddles.values())
+        riddle_keys = list(riddles.keys())
+    else:
+        riddles_list = riddles
+        riddle_keys = None
+
+    # Initialize or reset session if switching SDGs
     if session.get('sdg_num') != sdg_num:
         session['riddle_index'] = 0
         session['clues_used'] = 0
         session['sdg_num'] = sdg_num
 
+        # Log activity if user is logged in
         if 'user_id' in session:
             try:
                 conn = get_db_connection()
                 cur = conn.cursor()
-                cur.execute("INSERT INTO sdg_activity (user_id, sdg_id, action) VALUES (%s, %s, 'play')",
-                            (session['user_id'], sdg_num))
+                cur.execute(
+                    "INSERT INTO sdg_activity (user_id, sdg_id, action) VALUES (%s, %s, 'play')",
+                    (session['user_id'], sdg_num)
+                )
                 conn.commit()
                 cur.close()
                 conn.close()
             except Exception as e:
                 print(f"Activity log error (play): {e}")
 
+    # Get current index
     index = session['riddle_index']
 
-    if index >= len(riddles):
-        # Pass all riddles to the template to show answers
+    # Check if all riddles are completed
+    if index >= len(riddles_list):
         return render_template('completed.html', 
                              sdg_num=sdg_num, 
                              clues=session['clues_used'],
-                             riddles=riddles)
+                             riddles=riddles_list)
 
-    riddle = riddles[index]
+    # Get current riddle
+    riddle = riddles_list[index]
     message = ''
     clue = ''
 
+    # Handle form submission
     if request.method == 'POST':
         answer = request.form.get('answer', '').strip().lower()
-        if answer == riddle['answer'].lower():
+        correct_answer = riddle['answer'].lower()
+        
+        # Check if answer is correct
+        if answer == correct_answer:
             session['riddle_index'] += 1
+            
+            # Log correct answer if user is logged in
+            if 'user_id' in session:
+                try:
+                    conn = get_db_connection()
+                    cur = conn.cursor()
+                    cur.execute(
+                        "INSERT INTO sdg_activity (user_id, sdg_id, action) VALUES (%s, %s, 'correct')",
+                        (session['user_id'], sdg_num)
+                    )
+                    conn.commit()
+                    cur.close()
+                    conn.close()
+                except Exception as e:
+                    print(f"Activity log error (correct): {e}")
+            
             return redirect(url_for('sdg_quiz', sdg_num=sdg_num))
         else:
             message = '❌ Incorrect. Try again.'
+            
+            # Handle clue request
             if 'show_clue' in request.form:
                 clue = riddle.get('clue', '')
                 session['clues_used'] += 1
+                
+                # Log clue usage if user is logged in
+                if 'user_id' in session:
+                    try:
+                        conn = get_db_connection()
+                        cur = conn.cursor()
+                        cur.execute(
+                            "INSERT INTO sdg_activity (user_id, sdg_id, action) VALUES (%s, %s, 'clue')",
+                            (session['user_id'], sdg_num)
+                        )
+                        conn.commit()
+                        cur.close()
+                        conn.close()
+                    except Exception as e:
+                        print(f"Activity log error (clue): {e}")
 
-    return render_template('riddle.html', riddle=riddle, index=index + 1, clue=clue, message=message, sdg_num=sdg_num)
+    # Render riddle template
+    return render_template('riddle.html', 
+                         riddle=riddle, 
+                         index=index + 1, 
+                         clue=clue, 
+                         message=message, 
+                         sdg_num=sdg_num)
 
 @app.route('/admin/sdg-stats')
 def admin_sdg_stats():

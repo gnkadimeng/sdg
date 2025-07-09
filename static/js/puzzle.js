@@ -1,56 +1,4 @@
-{% extends "base.html" %}
-{% block title %}SDG 18 Puzzle Game{% endblock %}
 
-{% block content %}
-<div class="puzzle-game-container">
-  <div class="text-center mb-4">
-    <h2 class="fw-bold">🔐 SDG 18 Puzzle Challenge</h2>
-    {% if index == 1 %}
-    <div class="alert alert-dark mt-3 shadow-sm">
-      <p class="lead">Reconstruct the University Logo by solving this interactive puzzle!</p>
-    </div>
-    {% endif %}
-  </div>
-
-  <div class="difficulty-selector">
-    <label for="difficulty">Difficulty:</label>
-    <select id="difficulty">
-      <option value="easy">Easy (100 shuffles)</option>
-      <option value="medium" selected>Medium (300 shuffles)</option>
-      <option value="hard">Hard (500 shuffles)</option>
-    </select>
-  </div>
-
-  <div class="controls">
-    <button onclick="shuffleTiles()" class="btn btn-primary">🔄 New Game</button>
-    <button id="glueButton" onmousedown="showSolution()" onmouseup="hideSolution()" class="btn btn-secondary">👁️ Peek Solution</button>
-  </div>
-
-  <div class="game-container">
-    <div class="puzzle-grid" id="puzzleGrid"></div>
-    <div class="solved-overlay" id="solvedOverlay">
-      <img src="{{ url_for('static', filename='img/uj.png') }}" class="solved-image" alt="UJ Logo Solution">
-    </div>
-    <div class="win-message" id="winMessage">
-      <h2>🎉 Congratulations! 🎉</h2>
-      <p>You've assembled the UJ logo!</p>
-      <p>Go Orange Army!🧡🧡🧡🧡🧡</p>
-    </div>
-  </div>
-
-  <div class="stats">
-    <div class="stat-item">📊 Moves: <span id="moveCount">0</span></div>
-    <div class="stat-item">⏱️ Time: <span id="timer">0</span>s</div>
-  </div>
-</div>
-
-<!-- Link to external CSS -->
-<link rel="stylesheet" href="{{ url_for('static', filename='css/sdg18.css') }}">
-
-<!-- Link to external JS -->
-<script>
-
-    
         let tiles = [];
         let emptyIndex = 8;
         let moveCount = 0;
@@ -238,5 +186,3 @@
         createTiles();
         shuffleTiles();
  
-</script>
-{% endblock %}

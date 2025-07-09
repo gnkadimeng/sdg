@@ -1,71 +1,61 @@
 [
     {
         "question": "I take your knowledge from class to site, Turning theory to jobs - that feels right! I'm where UJ students work and grow, Earning skills for careers they'll soon know. What am I?",
-        "answer": "Work-Integrated Learning (WIL)",
-        "options": ["Work-Integrated Learning (WIL)", "UJ Internships", "WIL"],
+        "answer": ["Work-Integrated Learning (WIL)", "UJ Internships", "WIL"],
         "clue": "A UJ program that allows students to apply classroom knowledge through real-world workplace experiences, internships, or industry placements.",
         "image": "wil.gif"
     },
     {
         "question": "Got a business idea burning bright? I help you shape it, launch it right. From workshops to mentors, funding too, I help UJ students become something new. What am I?",
-        "answer": "Centre for Entrepreneurship (CFE)",
-        "options": ["Centre for Entrepreneurship (CFE)", "UJ Business Incubator", "UJ Startup Support"],
+        "answer": ["Centre for Entrepreneurship (CFE)", "UJ Business Incubator", "UJ Startup Support"],
         "clue": "A UJ initiative that supports student entrepreneurs in starting businesses and learning entrepreneurial skills.",
         "image": "cfe.gif"
     },
     {
         "question": "I give you tasks, small but fair, On campus jobs with income to spare. Supporting fees and skills on cue, At UJ, I create work for you. What am I?",
-        "answer": "Student Assistant Program",
-        "options": ["Student Assistant Program", "UJ Work-Study Scheme", "Campus Jobs for Students"],
+        "answer": ["Student Assistant Program", "UJ Work-Study Scheme", "Campus Jobs for Students"],
         "clue": "A work-study program or on-campus job initiative that UJ offers to students to help them earn while they learn.",
         "image": "student_jobs.gif"
     },
     {
         "question": "Got a great idea, a patent to file? I help researchers go the extra mile. Turning knowledge into business and trade, I make sure UJ's innovations are paid. What am I?",
-        "answer": "Technology Transfer Office (TTO)",
-        "options": ["Technology Transfer Office (TTO)", "UJ Innovation Office", "Research Commercialisation Hub"],
+        "answer": ["Technology Transfer Office (TTO)", "UJ Innovation Office", "Research Commercialisation Hub"],
         "clue": "A UJ office that helps students and researchers turn innovations into startups, patents, and real-world solutions.",
         "image": "tto.gif"
     },
     {
         "question": "Before you graduate and enter the race, I help with your CV and interview face. With guidance, tips, and career flair, I help you step into work out there. What am I?",
-        "answer": "UJ Career Services",
-        "options": ["UJ Career Services", "Work Readiness Program", "Career Development Centre"],
+        "answer": ["UJ Career Services", "Work Readiness Program", "Career Development Centre"],
         "clue": "A UJ department that offers CV writing, career guidance, and job readiness workshops for students.",
         "image": "career_services.gif"
     },
     {
         "question": "I teach robotics, AI, and code, Skills for a future digitally bestowed. With 4IR, jobs evolve anew, At UJ, I prepare that future for you. What am I?",
-        "answer": "4IR Skills Programme",
-        "options": ["4IR Skills Programme", "UJ Fourth Industrial Revolution Hub", "Digital Skills Training"],
+        "answer": ["4IR Skills Programme", "UJ Fourth Industrial Revolution Hub", "Digital Skills Training"],
         "clue": "A UJ program or initiative that trains students for careers in the Fourth Industrial Revolution -focusing on AI, coding, and emerging tech.",
         "image": "4ir.gif"
     },
     {
         "question": "I connect graduates far and wide, Helping careers with UJ pride. Networking, jobs, mentorship too, Stay with UJ - I'm here for you. What am I?",
-        "answer": "UJ Alumni Network",
-        "options": ["UJ Alumni Network", "Graduate Success Platform", "Career & Alumni Network"],
+        "answer": ["UJ Alumni Network", "Graduate Success Platform", "Career & Alumni Network"],
         "clue": "A UJ platform that supports graduates with networking, job connections, and career development after they complete their studies.",
         "image": "alumni.gif"
     },
     {
         "question": "Short but strong, I help you upskill, For work, promotion, or leadership thrill. At UJ, my courses are sharp and fast, Preparing careers designed to last. What am I?",
-        "answer": "Continuing Education Programmes (CEP)",
-        "options": ["Continuing Education Programmes (CEP)", "UJ Short Courses", "Professional Upskilling"],
+        "answer": ["Continuing Education Programmes (CEP)", "UJ Short Courses", "Professional Upskilling"],
         "clue": "A program offering professional short courses and skills-based training for lifelong learning and career development.",
         "image": "cep.gif"
     },
     {
         "question": "I help small businesses stand up strong, With workshops, funding, and advice lifelong. Entrepreneurs, students, startups too - UJ's support helps dreams come true. What am I?",
-        "answer": "Small Business Development Program",
-        "options": ["Small Business Development Program", "UJ Entrepreneurship Hub", "Startup Support Services"],
+        "answer": ["Small Business Development Program", "UJ Entrepreneurship Hub", "Startup Support Services"],
         "clue": "An initiative at UJ that helps students and community members develop small businesses and entrepreneurial ventures.",
         "image": "small_biz.gif"
     },
     {
         "question": "I balance teaching, research, and care, So academic staff workloads are fair. UJ tracks me to keep things light, Making sure no one works all night. What am I?",
-        "answer": "Academic workload model",
-        "options": ["Academic workload model", "Teaching-research balance", "Faculty workload structure"],
+        "answer": ["Academic workload model", "Teaching-research balance", "Faculty workload structure"],
         "clue": "A model used at UJ to fairly distribute work among academic staff - balancing teaching, research, and community duties.",
         "image": "workload.gif"
     }

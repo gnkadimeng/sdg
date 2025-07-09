@@ -420,10 +420,10 @@ def sdg_quiz(sdg_num):
     # Handle form submission
     if request.method == 'POST':
         answer = request.form.get('answer', '').strip().lower()
-        correct_answer = riddle['answer'].lower()
+        correct_answers = [a.lower() for a in riddle['answer']]  # Get all possible correct answers
         
-        # Check if answer is correct
-        if answer == correct_answer:
+        # Check if answer is correct (matches any of the possible answers)
+        if answer in correct_answers:
             session['riddle_index'] += 1
             
             # Log correct answer if user is logged in
@@ -471,7 +471,8 @@ def sdg_quiz(sdg_num):
                          index=index + 1, 
                          clue=clue, 
                          message=message, 
-                         sdg_num=sdg_num)
+                         sdg_num=sdg_num,
+                         is_last_question=(index == len(riddles_list) - 1))
 
 @app.route('/admin/sdg-stats')
 def admin_sdg_stats():

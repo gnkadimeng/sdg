@@ -1,71 +1,61 @@
 [
   {
     "question": "I wear robes, but not for show. I bring justice where students go. From evictions to legal advice, I help make fairness the right price.",
-    "answer": "UJ Law Clinic",
-    "options": ["UJ Law Clinic", "Legal aid", "Free law service"],
+    "answer": ["UJ Law Clinic", "Legal aid", "Free law service"],
     "clue": "Offering free legal aid to students and communities.",
     "image": "uj_law_clinic.gif"
   },
   {
     "question": "I'm not a judge but make rulings true. At UJ, you'll face me if rules don't suit you. I live in F7, take me seriously — or you'll face academic misery.",
-    "answer": "Disciplinary Hearing",
-    "options": ["Disciplinary Hearing", "Student tribunal", "Conduct hearing"],
+    "answer": ["Disciplinary Hearing", "Student tribunal", "Conduct hearing"],
     "clue": "UJ's formal process when students break serious rules.",
     "image": "f7_hearing.gif"
   },
   {
     "question": "I'm the voice of the student, chosen to lead, I fight for fairness, rights, and student need. From fees to food, I take a stand — who am I, with leadership planned?",
-    "answer": "SRC",
-    "options": ["SRC", "Student Representative Council", "Student leaders"],
+    "answer": ["SRC", "Student Representative Council", "Student leaders"],
     "clue": "Student leaders who represent and advocate for all.",
     "image": "src.gif"
   },
   {
     "question": "I help students stand up tall, learning rights and justice for all. From human dignity to laws that bind, what kind of learning shapes the mind?",
-    "answer": "Human Rights Education",
-    "options": ["Human Rights Education", "Civic education", "Justice studies"],
+    "answer": ["Human Rights Education", "Civic education", "Justice studies"],
     "clue": "UJ hosts public lectures and courses on this.",
     "image": "human_rights.gif"
   },
   {
     "question": "I shine when rules are clear, and corruption disappears. UJ upholds me in every task — I'm the ethical lens, the leadership mask.",
-    "answer": "Governance",
-    "options": ["Governance", "Institutional leadership", "Ethical oversight"],
+    "answer": ["Governance", "Institutional leadership", "Ethical oversight"],
     "clue": "UJ uses King IV principles to ensure I'm strong.",
     "image": "governance.gif"
   },
   {
     "question": "A place where arguments find their way, Where laws decide what people say. The judge sits high, ruling fair, Giving justice its rightful share.",
-    "answer": "Court",
-    "options": ["Court", "Judicial system", "Legal chamber"],
+    "answer": ["Court", "Judicial system", "Legal chamber"],
     "clue": "You go here when seeking legal justice.",
     "image": "court.gif"
   },
   {
     "question": "Rules I am, to guide us all. Without me, even empires fall. From society's core to campus life, I cut through confusion and settle strife.",
-    "answer": "Law",
-    "options": ["Law", "Legal framework", "Regulations"],
+    "answer": ["Law", "Legal framework", "Regulations"],
     "clue": "Every society — and university — runs on me.",
     "image": "law.gif"
   },
   {
     "question": "I outline your rights in black and white. I guide UJ and the nation's fight. I'm the highest rule, always in place — look to me in every case.",
-    "answer": "Constitution",
-    "options": ["Constitution", "Supreme law", "Legal foundation"],
+    "answer": ["Constitution", "Supreme law", "Legal foundation"],
     "clue": "The foundation of justice and governance.",
     "image": "constitution.gif"
   },
   {
     "question": "When wrong is done and no one speaks, I step up though the future looks bleak. I face the risk, I blow the horn — for truth and justice I am sworn.",
-    "answer": "Whistleblower",
-    "options": ["Whistleblower", "Truth teller", "Ethics reporter"],
+    "answer": ["Whistleblower", "Truth teller", "Ethics reporter"],
     "clue": "I expose corruption and unethical practices.",
     "image": "whistleblower.gif"
   },
   {
     "question": "I'm more than peace, I bring solutions. Signed with care to end institutions of war and fight, I mark a new light. What am I, for nations in strife?",
-    "answer": "Peace Agreement",
-    "options": ["Peace Agreement", "Ceasefire", "Treaty"],
+    "answer": ["Peace Agreement", "Ceasefire", "Treaty"],
     "clue": "A formal step toward ending conflict.",
     "image": "peace_agreement.gif"
   }

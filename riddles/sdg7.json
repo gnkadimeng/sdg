@@ -1,71 +1,61 @@
 [
     {
         "question": "I rise each day and shine so bright, Powering UJ with clean, pure light. On rooftops, I help bills decline, Saving the planet, one panel at a time. What am I?",
-        "answer": "Solar Energy",
-        "options": ["Solar Energy", "Sun", "Sunlight"],
+        "answer": ["Solar Energy", "Sun", "Sunlight"],
         "clue": "A renewable energy source UJ uses via solar panels to reduce carbon emissions and power campus operations.",
         "image": "sun.gif"
     },
     {
         "question": "I turn sunlight, wind, and waste to power, Supporting green skills by the hour. At DFC, I lead the way, For clean tech jobs and a greener day. What am I?",
-        "answer": "UJ PEETS",
-        "options": ["UJ PEETS", "Process, Energy, Environment, and Technology Station", "UJ Green Tech Hub"],
+        "answer": ["UJ PEETS", "Process, Energy, Environment, and Technology Station", "UJ Green Tech Hub"],
         "clue": "A UJ innovation station that drives renewable energy, energy efficiency, and sustainable technology solutions for students, businesses, and communities.",
         "image": "peets_station.gif"
     },
     {
         "question": "I flow unseen to power your home, From coal or sun, through wires I roam. What am I?",
-        "answer": "Electricity",
-        "options": ["Electricity", "Power", "Energy"],
+        "answer": ["Electricity", "Power", "Energy"],
         "clue": "This invisible force powers your home when you plug in devices.",
         "image": "electricity.gif"
     },
     {
         "question": "I light your halls, your labs, your class, Using less energy with every pass. I replaced old bulbs that wasted might, Now UJ glows with smarter light. What am I?",
-        "answer": "LED Bulb",
-        "options": ["LED Bulb", "Energy-saving light", "Efficient lighting"],
+        "answer": ["LED Bulb", "Energy-saving light", "Efficient lighting"],
         "clue": "A lighting system UJ adopted campus-wide to reduce electricity consumption.",
         "image": "led_bulb.gif"
     },
     {
         "question": "I heat your shower with less demand, by pulling warmth from air or land. I replaced old heaters that cost a ton. What am I that gets the job done?",
-        "answer": "Heat Pump",
-        "options": ["Heat Pump", "Energy-efficient heater", "Thermal pump"],
+        "answer": ["Heat Pump", "Energy-efficient heater", "Thermal pump"],
         "clue": "UJ installed these in student residences to reduce electricity use.",
         "image": "heat_pump.gif"
     },
     {
         "question": "When halls are empty, I power down, Saving energy all around town. When students pass, I flick back on - Keeping waste and darkness gone. What am I?",
-        "answer": "Motion Sensors",
-        "options": ["Motion Sensors", "Occupancy sensors", "Automatic light sensors"],
+        "answer": ["Motion Sensors", "Occupancy sensors", "Automatic light sensors"],
         "clue": "A sensor system installed in high-traffic areas like lecture halls, libraries, and restrooms at UJ to reduce energy waste.",
         "image": "motion_sensors.gif"
     },
     {
         "question": "Charge me up; I store the sun, Powering devices when day is done. What am I?",
-        "answer": "Solar Battery",
-        "options": ["Solar Battery", "Energy storage", "Solar power bank"],
+        "answer": ["Solar Battery", "Energy storage", "Solar power bank"],
         "clue": "This stores solar energy to be used later, especially when the sun isn't shining.",
         "image": "solar_battery.gif"
     },
     {
         "question": "Four wheels, no fumes, I glide so clean, On the roads, I'm rarely unseen. No petrol needed, I charge, then go, A cleaner campus, as students know. What am I?",
-        "answer": "Electric Bus",
-        "options": ["Electric Bus", "e-Bus", "Battery-powered bus"],
+        "answer": ["Electric Bus", "e-Bus", "Battery-powered bus"],
         "clue": "A green transport solution used by UJ - a shuttle service powered by electricity instead of fuel.",
         "image": "electric_vehicle.gif"
     },
     {
         "question": "On top of buildings, I stand proud, Turning sunshine into watts unbowed. I help UJ cut the grid demand, Greener campuses across the land. What am I?",
-        "answer": "Solar PV System",
-        "options": ["Solar PV System", "Solar Panels", "Rooftop Solar Array"],
+        "answer": ["Solar PV System", "Solar Panels", "Rooftop Solar Array"],
         "clue": "A renewable energy system UJ installed on multiple campuses like APK, DFC, and APB to reduce grid electricity reliance.",
         "image": "solar_panels.gif"
     },
     {
         "question": "UJ's pledge to the community, Promoting energy with unity. What program am I?",
-        "answer": "Renewable Energy",
-        "options": ["Renewable Energy", "Green energy", "Sustainable energy"],
+        "answer": ["Renewable Energy", "Green energy", "Sustainable energy"],
         "clue": "UJ is actively promoting the use of renewable energy sources to students and the community.",
         "image": "renewable_energy.gif"
     }

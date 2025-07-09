@@ -1,71 +1,61 @@
 [
     {
         "question": "I am a barrier many face, stopping women from advancing with grace. Invisible but real, I keep them confined, higher positions I am slow to find. What am I?",
-        "answer": "Glass Ceiling",
-        "options": ["Glass Ceiling", "Invisible Barrier", "Promotion Barrier"],
+        "answer": ["Glass Ceiling", "Invisible Barrier", "Promotion Barrier"],
         "clue": "This invisible barrier keeps women from reaching the highest levels in their careers.",
         "image": "glass_ceiling.gif"
     },
     {
         "question": "I am unpaid but always done, at home or work, my labor never won. Without me, the world would fall apart, yet recognition I still lack in heart. What am I?",
-        "answer": "Unpaid Care Work",
-        "options": ["Unpaid Care Work", "Domestic Labour", "Household Duties"],
+        "answer": ["Unpaid Care Work", "Domestic Labour", "Household Duties"],
         "clue": "This essential work, mostly carried out by women, includes caregiving and domestic tasks.",
         "image": "unpaid_care.gif"
     },
     {
         "question": "I exist when equal pay is not seen, between men and women, a growing sheen. I show the difference for work the same, making it clear there's an unjust game. What am I?",
-        "answer": "Gender Pay Gap",
-        "options": ["Gender Pay Gap", "Wage Gap", "Pay Disparity"],
+        "answer": ["Gender Pay Gap", "Wage Gap", "Pay Disparity"],
         "clue": "The disparity between the wages of men and women for similar roles is known as this.",
         "image": "gender_pay_gap.gif"
     },
     {
         "question": "Though laws might say equality is near, in some places, violence still strikes fear. I am the act that must be stopped, where women's safety should be topped. What am I?",
-        "answer": "Gender-Based Violence",
-        "options": ["Gender-Based Violence", "Violence Against Women", "Abuse"],
+        "answer": ["Gender-Based Violence", "Violence Against Women", "Abuse"],
         "clue": "This widespread issue affects women and girls globally, often hidden but persistent.",
         "image": "gender_based_violence.gif"
     },
     {
         "question": "I am a law that should make sure, equality is upheld, not just in nature. But without action, my impact is small, leaving many women still to fall. What am I?",
-        "answer": "Gender Equality Law",
-        "options": ["Gender Equality Law", "Equality Legislation", "Anti-Discrimination Law"],
+        "answer": ["Gender Equality Law", "Equality Legislation", "Anti-Discrimination Law"],
         "clue": "These laws are designed to ensure equal treatment of men and women, but enforcement varies.",
         "image": "gender_equality_laws.gif"
     },
     {
         "question": "I empower women in science and tech, Where coding and labs are no longer a wreck. At UJ, I boost girls in STEM fields bright, Ensuring gender balance feels just right. What am I?",
-        "answer": "UJ Women in STEM Program",
-        "options": ["UJ Women in STEM Program", "Women in Science Initiative", "Female STEM Empowerment"],
+        "answer": ["UJ Women in STEM Program", "Women in Science Initiative", "Female STEM Empowerment"],
         "clue": "A UJ initiative that promotes female participation and leadership in Science, Technology, Engineering, and Mathematics (STEM) fields.",
         "image": "uj_women_stem.gif"
     },
     {
         "question": "I am the effort to ensure all girls get the chance to grow, in every class and school we go. When given the tools to learn, equality will finally return. What am I?",
-        "answer": "Girls' Education",
-        "options": ["Girls' Education", "Female Schooling", "Education for Girls"],
+        "answer": ["Girls' Education", "Female Schooling", "Education for Girls"],
         "clue": "Ensuring girls receive education is central to achieving gender equality.",
         "image": "girls_education.gif"
     },
     {
         "question": "I guide the rules, I change the way, For gender equity every day. At UJ, I'm written clear and strong, Ensuring fairness where it's been wrong. What am I?",
-        "answer": "UJ Gender Equity Policy",
-        "options": ["UJ Gender Equity Policy", "UJ Transformation Framework", "Gender Equality Policy"],
+        "answer": ["UJ Gender Equity Policy", "UJ Transformation Framework", "Gender Equality Policy"],
         "clue": "A formal policy integrated into UJ's transformation framework, addressing gender equality and creating a safer, inclusive campus.",
         "image": "uj_gender_policy.gif"
     },
     {
         "question": "I exist when women and men work side by side, in workspaces where no one should hide. Equality means fair treatment for all, no matter what gender, or whether tall or small. What am I?",
-        "answer": "Workplace Gender Equality",
-        "options": ["Workplace Gender Equality", "Equal Opportunities", "Gender-Inclusive Workplace"],
+        "answer": ["Workplace Gender Equality", "Equal Opportunities", "Gender-Inclusive Workplace"],
         "clue": "A place where everyone has equal opportunities, regardless of gender, in the workforce.",
         "image": "workplace_equality.gif"
     },
     {
         "question": "I develop leaders, women who rise, Breaking stereotypes, reaching the skies. Workshops and training, confidence too, I help shape leaders who break through. What am I?",
-        "answer": "UJ Women's Leadership Development Programme",
-        "options": ["UJ Women's Leadership Development Programme", "UJ Leadership for Women", "Women in Leadership Programme"],
+        "answer": ["UJ Women's Leadership Development Programme", "UJ Leadership for Women", "Women in Leadership Programme"],
         "clue": "Leadership workshops hosted at UJ to empower women staff and students into leadership positions.",
         "image": "uj_women_leadership.gif"
     }

@@ -1,71 +1,61 @@
 [
     {
         "question": "I speak without a voice and listen without ears. I bridge gaps between worlds, alleviating fears. What am I?",
-        "answer": "Sign language",
-        "options": ["Sign language", "Visual language", "Hand communication"],
+        "answer": ["Sign language", "Visual language", "Hand communication"],
         "clue": "Think of a device that helps those with hearing impairments communicate.",
         "image": "sign_language.gif"
     },
     {
         "question": "I am a place where minds grow wide, welcoming all to step inside. No matter your background or your name, here, all are equal in the pursuit of fame. What am I?",
-        "answer": "University",
-        "options": ["University", "Tertiary institution", "Higher education"],
+        "answer": ["University", "Tertiary institution", "Higher education"],
         "clue": "It's an institution dedicated to learning and inclusivity.",
         "image": "university.gif"
     },
     {
         "question": "I am a path that's clear and wide, ensuring all can walk or ride. No stairs to climb, no doors to bar, I make sure you can go far. What am I?",
-        "answer": "Accessible ramp",
-        "options": ["Accessible ramp", "Wheelchair ramp", "Mobility aid ramp"],
+        "answer": ["Accessible ramp", "Wheelchair ramp", "Mobility aid ramp"],
         "clue": "Consider features in buildings that assist those with mobility challenges.",
         "image": "accessible_ramp.gif"
     },
     {
         "question": "In the digital realm, I stand tall, ensuring access and equity for all. I read aloud and magnify, so everyone can see the sky. What am I?",
-        "answer": "Screen reader",
-        "options": ["Screen reader", "Text-to-speech software", "Accessibility software"],
+        "answer": ["Screen reader", "Text-to-speech software", "Accessibility software"],
         "clue": "Think of software that assists those with visual impairments.",
         "image": "screen_reader.gif"
     },
     {
         "question": "I am a group that lends an ear, supporting peers year after year. At UJ, I play my part, guiding students with an open heart. What am I?",
-        "answer": "Peer mentoring program",
-        "options": ["Peer mentoring program", "UJ Peer Support", "Student Mentorship"],
+        "answer": ["Peer mentoring program", "UJ Peer Support", "Student Mentorship"],
         "clue": "This group offers mentorship and support to fellow students.",
         "image": "peer_mentoring.gif"
     },
     {
         "question": "I am an event that brings to light, the challenges faced out of sight. At UJ, I raise awareness and funds, ensuring support for everyone. What am I?",
-        "answer": "UJ Disability Awareness Campaign",
-        "options": ["UJ Disability Awareness Campaign", "Disability Week", "Inclusive UJ"],
+        "answer": ["UJ Disability Awareness Campaign", "Disability Week", "Inclusive UJ"],
         "clue": "This event focuses on disability awareness and support.",
         "image": "disability.gif"
     },
     {
         "question": "I am a policy, firm and clear, ensuring all are welcome here. No bias or hate will you find, as UJ fosters a community kind. What am I?",
-        "answer": "Anti-discrimination policy",
-        "options": ["Anti-discrimination policy", "Equality policy", "Inclusion policy"],
+        "answer": ["Anti-discrimination policy", "Equality policy", "Inclusion policy"],
         "clue": "This policy ensures equal treatment for all students and staff.",
         "image": "anti_discrimination.gif"
     },
     {
         "question": "I am a service, discreet and wise, offering support beyond eyes. At UJ, I help you cope, providing counsel and hope. What am I?",
-        "answer": "PsyCaD",
-        "options": ["PsyCaD", "Student Counseling Services", "Mental Health Support"],
+        "answer": ["PsyCaD", "Student Counseling Services", "Mental Health Support"],
         "clue": "This service offers psychological support to students.",
         "image": "psycad.gif"
     },
     {
         "question": "I am a device that helps you see, bringing text to life for me. At UJ's library, I stand by, ensuring knowledge is always nigh. What am I?",
-        "answer": "Braille display",
-        "options": ["Braille display", "Tactile reader", "Braille device"],
+        "answer": ["Braille display", "Tactile reader", "Braille device"],
         "clue": "This device assists those with visual impairments in reading.",
         "image": "braille.gif"
     },
     {
         "question": "I am a commitment, strong and true, to reduce inequality for you. At UJ, I guide the way, ensuring fairness every day. What am I?",
-        "answer": "SDG 10: Reduced Inequalities",
-        "options": ["SDG 10: Reduced Inequalities", "Equality goal", "Fairness initiative"],
+        "answer": ["Reduced Inequalities", "Equality goal", "Fairness initiative"],
         "clue": "This is one of the 17 Sustainable Development Goals.",
         "image": "sdg_10.gif"
     }

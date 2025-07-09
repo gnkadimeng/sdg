@@ -1,71 +1,61 @@
 [
   {
     "question": "I stand tall and green, a home to many creatures unseen. I provide air that's clean and wood that's keen. What am I?",
-    "answer": "Tree Planting Campaign",
-    "options": ["Tree Planting Campaign", "UJ Greening Drive", "Urban Reforestation Project"],
+    "answer": ["Tree Planting Campaign", "UJ Greening Drive", "Urban Reforestation Project"],
     "clue": "I help UJ's carbon sequestration and biodiversity goals.",
     "image": "tree.gif"
   },
   {
     "question": "I wave with golden grace, a natural South African space. Lions might roam, eagles might soar — what landscape do we adore?",
-    "answer": "Savanna",
-    "options": ["Savanna", "Grassland", "Bushveld"],
+    "answer": ["Savanna", "Grassland", "Bushveld"],
     "clue": "UJ researchers help restore this iconic biome.",
     "image": "savanna.gif"
   },
   {
     "question": "I bring life back to barren land, planting roots with careful hand. UJ plants me by the thousand — what greening act is proudly grounded?",
-    "answer": "Reforestation",
-    "options": ["Reforestation", "Afforestation", "Tree planting"],
+    "answer": ["Reforestation", "Afforestation", "Tree planting"],
     "clue": "Part of UJ's 50,000-tree campaign for ecosystem revival.",
     "image": "reforestation.gif"
   },
   {
     "question": "I slither unseen in grass and tree, misunderstood but vital to be. I help balance pests and keep nature right. What reptile hides in plain sight?",
-    "answer": "Snake",
-    "options": ["Snake", "Reptile", "Natural pest control"],
+    "answer": ["Snake", "Reptile", "Natural pest control"],
     "clue": "I play an essential role in the food chain.",
     "image": "snake.gif"
   },
   {
     "question": "I steal life from wild terrain, for trophy, trade, or selfish gain. I shrink the numbers of the free — what illegal act do you see?",
-    "answer": "Poaching",
-    "options": ["Poaching", "Illegal hunting", "Wildlife crime"],
+    "answer": ["Poaching", "Illegal hunting", "Wildlife crime"],
     "clue": "UJ's research promotes stronger wildlife protection laws.",
     "image": "poaching.gif"
   },
   {
     "question": "From bees to trees, I count them all. My richness keeps ecosystems from the fall. What am I — nature's variety, big and small?",
-    "answer": "Biodiversity",
-    "options": ["Biodiversity", "Species variety", "Ecosystem diversity"],
+    "answer": ["Biodiversity", "Species variety", "Ecosystem diversity"],
     "clue": "UJ studies this to restore balance in degraded habitats.",
     "image": "biodiversity.gif"
   },
   {
     "question": "I creep in when land is bare, turning green into dusty air. UJ fights me with plants and care. What threat am I that's hard to bear?",
-    "answer": "Desertification",
-    "options": ["Desertification", "Land degradation", "Soil erosion"],
+    "answer": ["Desertification", "Land degradation", "Soil erosion"],
     "clue": "UJ uses agroecology and soil science to stop me.",
     "image": "desertification.gif"
   },
   {
     "question": "I house land research, so info is shared — a Gauteng hub that shows we care. I link projects, data, and policy, too. What UJ tool helps knowledge flow through?",
-    "answer": "Research Register",
-    "options": ["Research Register", "Environmental tracker", "Project database"],
+    "answer": ["Research Register", "Environmental tracker", "Project database"],
     "clue": "I track environmental projects in Gauteng and at UJ.",
     "image": "research_register.gif"
   },
   {
     "question": "I innovate for a greener earth, where sustainable tech finds its worth. From waste to energy, I lead the way — which UJ station saves the day?",
-    "answer": "UJ PEETS",
-    "options": ["UJ PEETS", "Green Innovation Hub", "EcoTech Center"],
+    "answer": ["UJ PEETS", "Green Innovation Hub", "EcoTech Center"],
     "clue": "I support green tech and environmental innovation.",
     "image": "uj_peets.gif"
   },
   {
     "question": "I'm the SDG with forests in mind, where life on land is redefined. Protecting creatures, soils, and seeds — which global goal meets all these needs?",
-    "answer": "SDG 15",
-    "options": ["SDG 15", "Life on Land", "Sustainable Forests"],
+    "answer": ["SDG 15", "Life on Land", "Sustainable Forests"],
     "clue": "This goal focuses on land, forests, biodiversity, and conservation.",
     "image": "sdg_15.gif"
   }

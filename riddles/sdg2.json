@@ -1,71 +1,61 @@
 [
     {
         "question": "I am a method combining fish farming and soilless plant cultivation, creating a symbiotic environment. What am I?",
-        "answer": "aquaponics",
-        "options": ["aquaponics", "Integrated farming","Symbiotic farming"],
+        "answer": ["aquaponics", "Integrated farming", "Symbiotic farming"],
         "clue": "Think of a system where aquatic creatures and plants benefit each other, often used in sustainable agriculture.",
         "image": "aquaponics.gif"
     },
     {
         "question": "I am a UJ initiative that provides meal packs to students in need, ensuring no one studies on an empty stomach. What is my name?",
-        "answer": "UJ Food Bank Project",
-         "options": ["UJ Food Bank Project", "UJ Meal Packs","Food Relief Program"],
+        "answer": ["UJ Food Bank Project", "UJ Meal Packs", "Food Relief Program"],
         "clue": "This project distributes non-perishable food items to support students facing food insecurity.",
         "image": "food_bank.gif"
     },
     {
         "question": "I am a farming technique that uses nutrient-rich water to grow plants without soil. What am I called?",
-        "answer": "hydroponics",
-        "options": ["hydroponics", "Water-based farming","Nutrient film technique"],
+        "answer": ["hydroponics", "Water-based farming", "Nutrient film technique"],
         "clue": "This method involves growing plants in water infused with essential nutrients, eliminating the need for soil.",
         "image": "hydroponics.gif"
     },
     {
         "question": "I am a UJ initiative that collaborates with a major food company to provide monthly food parcels to students. What is my name?",
-        "answer": "Plates4Days",
-        "options": ["Plates4Days", "Food4U","UJ Tiger Brands Program", "Food Parcel Initiative"],
+        "answer": ["Plates4Days", "Food4U", "UJ Tiger Brands Program", "Food Parcel Initiative"],
         "clue": "This program partners with Tiger Brands to combat student hunger on campus.",
         "image": "plates4days.gif"
     },
     {
         "question": "I am a system that manages the distribution of free meal parcels to UJ students through an online platform. What is my name?",
-        "answer": "Food Trolley System",
-        "options": ["Food Trolley System", "Digital Food Distribution","UJ Meal Parcel System"],
+        "answer": ["Food Trolley System", "Digital Food Distribution", "UJ Meal Parcel System"],
         "clue": "This system allows students to register, order, and track meal parcel collections digitally.",
         "image": "food_trolley.gif"
     },
     {
         "question": "I am a practice of cultivating crops and raising animals in ways that meet current needs without compromising future generations. What am I?",
-        "answer": "sustainable agriculture",
-        "options": ["sustainable agriculture", "friendly farming","Green farming"],
+        "answer": ["sustainable agriculture", "friendly farming", "Green farming"],
         "clue": "This approach focuses on farming methods that are environmentally friendly, economically viable, and socially responsible.",
         "image": "sustainable_agriculture.gif"
     },
     {
         "question": "I am a UJ center dedicated to advancing sustainable urban agriculture and food security through training and community engagement. What is my name?",
-        "answer": "Centre for Ecological Intelligence (CEI)",
-        "options": ["Centre for Ecological Intelligence (CEI)", "UJ Eco Centre","Agroecology Hub"],
+        "answer": ["Centre for Ecological Intelligence (CEI)", "UJ Eco Centre", "Agroecology Hub"],
         "clue": "This center offers courses in agroecology, aquaponics, and hydroponics to empower communities.",
         "image": "cei.gif"
     },
     {
         "question": "I am a UJ community garden project where students and locals grow food and share harvests. What am I?",
-        "answer": "Community Garden",
-        "options": ["Community Garden", "Campus Garden","UJ Urban Farming Project"],
+        "answer": ["Community Garden", "Campus Garden", "UJ Urban Farming Project"],
         "clue": "Found in UJ's green spaces, this initiative promotes food self-sufficiency and urban gardening.",
         "image": "aquaponics_system.gif"
     },
     {
         "question": "I am a UJ program that teaches single parents how to cultivate their own vegetable gardens, promoting self-sufficiency. What is my name?",
-        "answer": "Single Parents Empowerment Programme",
-         "options": ["Single Parents Empowerment Programme", "UJ Parent Garden Program ","Grow to Empower"],
+        "answer": ["Single Parents Empowerment Programme", "UJ Parent Garden Program", "Grow to Empower"],
         "clue": "This empowerment program focuses on sustainable agriculture to address social needs within the community.",
         "image": "single_parents_program.gif"
     },
     {
         "question": "I am a global goal aiming to end hunger, achieve food security, improve nutrition, and promote sustainable agriculture by 2030. What am I?",
-        "answer": "SDG 2: Zero Hunger",
-        "options": ["SDG 2: Zero Hunger", "Zero Hunger Goal","UN Hunger Goal"],
+        "answer": ["SDG 2: Zero Hunger", "Zero Hunger Goal", "UN Hunger Goal"],
         "clue": "This is the second goal among the United Nations' Sustainable Development Goals.",
         "image": "sdg2.gif"
     }

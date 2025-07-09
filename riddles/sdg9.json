@@ -1,71 +1,61 @@
 [
     {
         "question": "I connect cities, I speed up trade, Without me, travel would degrade. From bridges to roads, I help you steer, What am I, can you guess clear?",
-        "answer": "Infrastructure",
-        "options": ["Infrastructure", "Civil engineering structures", "Roads and bridges"],
-        "clue": "Without me, roads would crumble, and bridges wouldn’t stand.",
+        "answer": ["Infrastructure", "Civil engineering structures", "Roads and bridges"],
+        "clue": "Without me, roads would crumble, and bridges wouldn't stand.",
         "image": "infrastructure.gif"
     },
     {
-        "question": "I light your homes, I make machines run, But too much of me from coal isn’t fun. Solar and wind are the cleaner way, What am I that helps industries stay?",
-        "answer": "Renewable Energy",
-        "options": ["Renewable Energy", "Green power", "Clean energy sources"],
+        "question": "I light your homes, I make machines run, But too much of me from coal isn't fun. Solar and wind are the cleaner way, What am I that helps industries stay?",
+        "answer": ["Renewable Energy", "Green power", "Clean energy sources"],
         "clue": "You need me to charge your phone, but the sun and wind can provide me too.",
         "image": "renewable_energy.gif"
     },
     {
-        "question": "At UJ, minds meet, ideas ignite, To solve problems and make futures bright. It’s a space where innovation is key, A place of research, what could it be?",
-        "answer": "University of Johannesburg’s research labs",
-        "options": ["University of Johannesburg’s research labs", "UJ Innovation Hubs", "Research Centres"],
-        "clue": "It’s where students and professors work together to create new solutions.",
+        "question": "At UJ, minds meet, ideas ignite, To solve problems and make futures bright. It's a space where innovation is key, A place of research, what could it be?",
+        "answer": ["University of Johannesburg's research labs", "UJ Innovation Hubs", "Research Centres"],
+        "clue": "It's where students and professors work together to create new solutions.",
         "image": "research_lab.gif"
     },
     {
         "question": "I move fast, yet I have no feet, I send messages when people meet. I connect countries, businesses, and more, Without me, communication would be a chore.",
-        "answer": "Internet",
-        "options": ["Internet", "World Wide Web", "Online networks"],
+        "answer": ["Internet", "World Wide Web", "Online networks"],
         "clue": "You use me to browse, stream, and chat online.",
         "image": "internet.gif"
     },
     {
         "question": "I carry goods from place to place, On tracks I roll with steady pace. An innovation that still holds might, What am I, rolling day and night?",
-        "answer": "Train",
-        "options": ["Train", "Rail transport", "Locomotive"],
+        "answer": ["Train", "Rail transport", "Locomotive"],
         "clue": "I run on tracks and move heavy loads quickly.",
         "image": "train_railway.gif"
     },
     {
         "question": "UJ leads the way in the Fourth Revolution, With AI and robotics, they drive the solution. This special place is where tech takes flight, Guess this hub that sparks future insight.",
-        "answer": "4IR initiative",
-        "options": ["4IR initiative", "Fourth Industrial Revolution", "UJ Tech Hub"],
-        "clue": "It’s where UJ prepares students for the future with AI, robotics, and big data.",
+        "answer": ["4IR initiative", "Fourth Industrial Revolution", "UJ Tech Hub"],
+        "clue": "It's where UJ prepares students for the future with AI, robotics, and big data.",
         "image": "4ir.gif"
     },
     {
-        "question": "I’m made of plants but stronger still, Replacing plastic is my will. Innovation helps me rise anew, What am I, that’s good for you?",
-        "answer": "Biodegradable materials",
-        "options": ["Biodegradable materials", "Compostable packaging", "Eco-friendly products"],
-        "clue": "I break down naturally and don’t pollute the earth.",
+        "question": "I'm made of plants but stronger still, Replacing plastic is my will. Innovation helps me rise anew, What am I, that's good for you?",
+        "answer": ["Biodegradable materials", "Compostable packaging", "Eco-friendly products"],
+        "clue": "I break down naturally and don't pollute the earth.",
         "image": "biodegradable.gif"
     },
     {
         "question": "I represent the collective voice of workers, advocating for rights and fair conditions. What am I?",
-        "answer": "Unions",
-        "options": ["Unions", "Labor associations", "Trade unions"],
+        "answer": ["Unions", "Labor associations", "Trade unions"],
         "clue": "These organizations often negotiate on behalf of employees.",
         "image": "unions.gif"
     },
     {
         "question": "I can build, I can think, But unlike you, I do not blink. At UJ, they teach me well, I work with humans, can you tell?",
-        "answer": "Robots",
-        "options": ["Robots", "Automated machines", "Intelligent systems"],
+        "answer": ["Robots", "Automated machines", "Intelligent systems"],
         "clue": "Machines that can learn and perform tasks like humans.",
         "image": "robots.gif"
     },
     {
-        "question": "I’m a framework that balances teaching, research, and community engagement responsibilities for academic staff. What model am I?",
-        "answer": "Academic workload model",
-        "options": ["Academic workload model", "Teaching-research balance", "Faculty workload structure"],
+        "question": "I'm a framework that balances teaching, research, and community engagement responsibilities for academic staff. What model am I?",
+        "answer": ["Academic workload model", "Teaching-research balance", "Faculty workload structure"],
         "clue": "This model helps distribute workload fairly among university faculty.",
         "image": "workload.gif"
     }

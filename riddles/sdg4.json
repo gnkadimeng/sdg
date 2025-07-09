@@ -1,71 +1,61 @@
 [
     {
         "question": "I am a place at UJ where books abound, knowledge and wisdom can be found. Open to all who seek to learn, within my walls, minds brightly burn. What am I?",
-        "answer": "Library",
-        "options": ["Library", "UJ Library", "Campus Library"],
+        "answer": ["Library", "UJ Library", "Campus Library"],
         "clue": "This UJ facility offers external memberships, granting access to vast resources and study spaces.",
         "image": "library.gif"
     },
     {
         "question": "I am a digital realm where courses are free, accessible to all, from mountain to sea. UJ offers me to promote learning's light, advancing knowledge day and night. What am I?",
-        "answer": "MOOCs",
-        "options": ["MOOCs", "Massive Open Online Courses", "UJ Online Learning Platform"],
+        "answer": ["MOOCs", "Massive Open Online Courses", "UJ Online Learning Platform"],
         "clue": "UJ provides these online platforms to the public, supporting lifelong learning without formal enrollment.",
         "image": "moocs.png"
     },
     {
         "question": "When NSFAS won't cover it all, I step in so students won't fall. I help those caught in the funding gap. What UJ fund picks up the slack?",
-        "answer": "Missing Middle",
-        "options": ["Missing Middle", "Gap Funding", "UJ Future Walk"],
+        "answer": ["Missing Middle", "Gap Funding", "UJ Future Walk"],
         "clue": "UJ's financial support for students who don't qualify for NSFAS but still need help.",
         "image": "missing_money.gif"
     },
     {
         "question": "Bright young minds, ready to grow, A high school where future leaders glow. Excellence is nurtured, results are supreme, I prepare students for their UJ dream. What am I?",
-        "answer": "UJ Metropolitan Academy",
-        "options": ["UJ Metropolitan Academy", "UJ Met", "UJ High School"],
+        "answer": ["UJ Metropolitan Academy", "UJ Met", "UJ High School"],
         "clue": "A high-performing secondary school affiliated with UJ, aimed at academically talented learners from disadvantaged communities.",
         "image": "uj_met_academy.gif"
     },
     {
         "question": "I am the global goal aiming to teach, ensuring quality education for each. Numbered fourth among the seventeen, promoting learning, fair and clean. What am I?",
-        "answer": "SDG 4",
-        "options": ["SDG 4", "Quality Education Goal", "Education for All"],
+        "answer": ["SDG 4", "Quality Education Goal", "Education for All"],
         "clue": "This SDG focuses on education and is central to our escape room theme.",
         "image": "sdg4.gif"
     },
     {
         "question": "If first-year work feels tough to bear, I'm the team that gets you there. With writing, reading, math in hand, I help you thrive, not just withstand. What am I?",
-        "answer": "ADC",
-        "options": ["ADC", "Academic Development Centre", "UJ Academic Support"],
+        "answer": ["ADC", "Academic Development Centre", "UJ Academic Support"],
         "clue": "This centre supports students academically, especially in first year.",
         "image": "adc.jpeg"
     },
     {
         "question": "Short and sharp, yet rich in gain, I help you learn and grow your brain. From coding to public speaking flair, what UJ courses take you there?",
-        "answer": "Continuing Education Programmes",
-        "options": ["Continuing Education Programmes", "Short Courses", "Professional Learning"],
+        "answer": ["Continuing Education Programmes", "Short Courses", "Professional Learning"],
         "clue": "These are UJ's short courses and upskilling programmes for professionals and lifelong learners.",
         "image": "cep.gif"
     },
     {
         "question": "You can run a lab without a lab coat on, in 3D worlds where science is strong. With goggles or screens, I bring STEM to life. What UJ tech avoids real lab strife?",
-        "answer": "VARSTEME",
-        "options": ["VARSTEME", "UJ VR Lab", "STEM Simulation"],
+        "answer": ["VARSTEME", "UJ VR Lab", "STEM Simulation"],
         "clue": "UJ's immersive learning project using virtual and augmented reality for science education.",
         "image": "var.gif"
     },
     {
-        "question": "I’m a school where teachers are born, Future educators are daily sworn. On Soweto’s ground, I proudly stand, Blending learning and teaching hand in hand. What am I?",
-        "answer": "Funda UJabule School",
-        "options": ["Funda UJabule School", "UJ Soweto Teacher Training School", "UJ Education Campus"],
-        "clue": "A school located on UJ’s Soweto Campus, serving both as a primary school for local children and a training hub for future teachers.",
+        "question": "I'm a school where teachers are born, Future educators are daily sworn. On Soweto's ground, I proudly stand, Blending learning and teaching hand in hand. What am I?",
+        "answer": ["Funda UJabule School", "UJ Soweto Teacher Training School", "UJ Education Campus"],
+        "clue": "A school located on UJ's Soweto Campus, serving both as a primary school for local children and a training hub for future teachers.",
         "image": "funda_ujabule.gif"
     },
     {
         "question": "From Moodle to hybrid classes too, I help tech make learning new. My name says I'm here for the academic side. What UJ centre is your digital guide?",
-        "answer": "CAT",
-        "options": ["CAT", "Centre for Academic Technology", "Digital Learning Support"],
+        "answer": ["CAT", "Centre for Academic Technology", "Digital Learning Support"],
         "clue": "This UJ centre helps integrate tech into classrooms and learning environments.",
         "image": "cat.png"
     }

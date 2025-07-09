@@ -1,71 +1,61 @@
 [
     {
         "question": "I am essential for life, covering much of Earth's face. Without me, deserts thrive; with me, gardens grace. What am I?",
-        "answer": "Water",
-        "options": ["Water", "H2O", "Liquid Gold"],
+        "answer": ["Water", "H2O", "Liquid Gold"],
         "clue": "Think of the clear liquid that quenches your thirst and sustains all living things.",
         "image": "water.gif"
     },
     {
         "question": "When the clouds cry, I collect with care, Storing for gardens or flushing elsewhere. On APK and DFC, you'll find me stand, Saving water, sustaining the land. What am I?",
-        "answer": "Rainwater Harvesting System",
-        "options": ["Rainwater Harvesting System", "Water Collection Tanks", "Stormwater Capture"],
+        "answer": ["Rainwater Harvesting System", "Water Collection Tanks", "Stormwater Capture"],
         "clue": "A system at UJ campuses that collects rainwater for non-drinking purposes like irrigation or toilet flushing.",
         "image": "rainwater_system.gif"
     },
     {
         "question": "I clean your clothes without being seen, working behind the scenes to make them pristine. What am I?",
-        "answer": "Washing Machine",
-        "options": ["Washing Machine", "Laundry Appliance", "Clothes Cleaner"],
+        "answer": ["Washing Machine", "Laundry Appliance", "Clothes Cleaner"],
         "clue": "I'm an appliance found in many homes, using water and detergent to clean fabrics.",
         "image": "washing_machine.gif"
     },
     {
         "question": "I count each drop that flows each day, Tracking usage in a precise way. On every UJ campus, I stand alert, Saving water where waste might hurt. What am I?",
-        "answer": "Smart Water Meter",
-        "options": ["Smart Water Meter", "Water Monitoring System", "Digital Flow Tracker"],
+        "answer": ["Smart Water Meter", "Water Monitoring System", "Digital Flow Tracker"],
         "clue": "A digital system used at UJ to monitor and manage water consumption in real-time.",
         "image": "water_meter.gif"
     },
     {
         "question": "I have banks but hold no money, I flow endlessly to the sea. What am I?",
-        "answer": "River",
-        "options": ["River", "Stream", "Watercourse"],
+        "answer": ["River", "Stream", "Watercourse"],
         "clue": "I'm a natural stream of water, often winding and flowing towards larger bodies like oceans.",
         "image": "river.gif"
     },
     {
         "question": "I can be turned on and off, delivering a stream on demand. I'm found in kitchens and bathrooms across the land. What am I?",
-        "answer": "Tap",
-        "options": ["Tap", "Faucet", "Water Spigot"],
+        "answer": ["Tap", "Faucet", "Water Spigot"],
         "clue": "I'm a fixture that controls the release of water in sinks and tubs.",
         "image": "tap.gif"
     },
     {
         "question": "I am a facility where water is treated, ensuring it's safe before being retreated. What am I?",
-        "answer": "Water Treatment Plant",
-        "options": ["Water Treatment Plant", "Purification Facility", "Water Recycling Center"],
+        "answer": ["Water Treatment Plant", "Purification Facility", "Water Recycling Center"],
         "clue": "Think of the place where wastewater is purified before being released back into the environment.",
         "image": "water_treatment.gif"
     },
     {
         "question": "I'm on taps and showers, helping water last. With sensors or flow controls, I reduce waste fast. At UJ, I help cut the flow, So water-wise habits start to grow. What am I?",
-        "answer": "Water-Saving Devices",
-        "options": ["Water-Saving Devices", "Low-Flow Fixtures", "Conservation Tools"],
+        "answer": ["Water-Saving Devices", "Low-Flow Fixtures", "Conservation Tools"],
         "clue": "Devices like tap aerators, low-flow shower heads, and sensors used at UJ to reduce water consumption.",
         "image": "water_savers.gif"
     },
     {
         "question": "I drip from pipes, but don't go to waste. UJ reuses me with mindful haste. In gardens and systems, I find new life. What am I?",
-        "answer": "Greywater",
-        "options": ["Greywater", "Recycled Water", "Reclaimed Water"],
+        "answer": ["Greywater", "Recycled Water", "Reclaimed Water"],
         "clue": "UJ collects and repurposes gently used water from showers, sinks, and laundry to reduce waste.",
         "image": "greywater.gif"
     },
     {
         "question": "I am a collaborative group at UJ, addressing water security issues in the city each day. Bringing together experts and the community, to tackle challenges in unity. What am I?",
-        "answer": "Johannesburg Community of Practice for Water Security",
-        "options": ["Johannesburg Community of Practice for Water Security", "Water Security Initiative", "H2O Task Force"],
+        "answer": ["Johannesburg Community of Practice for Water Security", "Water Security Initiative", "H2O Task Force"],
         "clue": "Think of UJ's initiative that unites various stakeholders to improve urban water security.",
         "image": "cop4h2o.gif"
     }

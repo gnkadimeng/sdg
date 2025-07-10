@@ -21,7 +21,7 @@
         "question": "Bright young minds, ready to grow, A high school where future leaders glow. Excellence is nurtured, results are supreme, I prepare students for their UJ dream. What am I?",
         "answer": ["UJ Metropolitan Academy", "UJ Met", "UJ High School"],
         "clue": "A high-performing secondary school affiliated with UJ, aimed at academically talented learners from disadvantaged communities.",
-        "image": "uj_met_academy.gif"
+        "image": "uj_met.png"
     },
     {
         "question": "I am the global goal aiming to teach, ensuring quality education for each. Numbered fourth among the seventeen, promoting learning, fair and clean. What am I?",
@@ -51,7 +51,7 @@
         "question": "I'm a school where teachers are born, Future educators are daily sworn. On Soweto's ground, I proudly stand, Blending learning and teaching hand in hand. What am I?",
         "answer": ["Funda UJabule School", "UJ Soweto Teacher Training School", "UJ Education Campus"],
         "clue": "A school located on UJ's Soweto Campus, serving both as a primary school for local children and a training hub for future teachers.",
-        "image": "funda_ujabule.gif"
+        "image": "funda.jpeg"
     },
     {
         "question": "From Moodle to hybrid classes too, I help tech make learning new. My name says I'm here for the academic side. What UJ centre is your digital guide?",

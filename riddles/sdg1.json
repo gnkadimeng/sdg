@@ -15,7 +15,7 @@
         "question": "I bring together runners and walkers alike To support students facing financial strife. With each step taken, funds are raised, Helping dreams be realized and futures blazed. What am I?",
         "answer": ["Fundraising Walk", "UJ Future Walk"],
         "clue": "An annual event where the community walks or runs to raise funds for students in need.",
-        "image": "poverty.gif"
+        "image": "run.gif"
     },
     {
         "question": "At the University of Johannesburg, students with innovative business ideas can present them to secure funding and mentorship support. What UJ program or space makes this possible?",
@@ -50,13 +50,13 @@
     {
         "question": "UJ gives extra support to students from the poorest backgrounds. What is this called?",
         "answer": ["quintile support", "Low-income support", "Subsidy scheme"],
-        "clue": "It’s aimed at students in the lowest income group.",
+        "clue": "It's aimed at students in the lowest income group.",
         "image": "support.gif"
     },      
     {
         "question": "When NSFAS says no and bursaries say not quite, I step in to help make it right. For students who fall in between, I bridge the gap, calm and unseen. What am I?",
         "answer": ["Missing Middle Fund", "Missing Middle", "Gap Funding"],
-        "clue": "UJ provides this financial support to students who don’t qualify for NSFAS but still cannot afford fees.",
-        "image": "report.gif"
+        "clue": "UJ provides this financial support to students who don't qualify for NSFAS but still cannot afford fees.",
+        "image": "middle.gif"
     }
 ]

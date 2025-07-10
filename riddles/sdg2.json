@@ -39,13 +39,13 @@
         "question": "I am a UJ center dedicated to advancing sustainable urban agriculture and food security through training and community engagement. What is my name?",
         "answer": ["Centre for Ecological Intelligence (CEI)", "UJ Eco Centre", "Agroecology Hub"],
         "clue": "This center offers courses in agroecology, aquaponics, and hydroponics to empower communities.",
-        "image": "cei.gif"
+        "image": "cei.jpg"
     },
     {
         "question": "I am a UJ community garden project where students and locals grow food and share harvests. What am I?",
         "answer": ["Community Garden", "Campus Garden", "UJ Urban Farming Project"],
         "clue": "Found in UJ's green spaces, this initiative promotes food self-sufficiency and urban gardening.",
-        "image": "aquaponics_system.gif"
+        "image": "garden.gif"
     },
     {
         "question": "I am a UJ program that teaches single parents how to cultivate their own vegetable gardens, promoting self-sufficiency. What is my name?",
@@ -55,7 +55,7 @@
     },
     {
         "question": "I am a global goal aiming to end hunger, achieve food security, improve nutrition, and promote sustainable agriculture by 2030. What am I?",
-        "answer": ["SDG 2: Zero Hunger", "Zero Hunger Goal", "UN Hunger Goal"],
+        "answer": ["SDG 2: Zero Hunger", "Zero Hunger Goal", "UN Hunger Goal", "SDG 2"],
         "clue": "This is the second goal among the United Nations' Sustainable Development Goals.",
         "image": "sdg2.gif"
     }

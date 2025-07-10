@@ -25,15 +25,15 @@
     },
     {
         "question": "I am a law that should make sure, equality is upheld, not just in nature. But without action, my impact is small, leaving many women still to fall. What am I?",
-        "answer": ["Gender Equality Law", "Equality Legislation", "Anti-Discrimination Law"],
+        "answer": ["Gender Equality Law", "Equality Legislation", "Anti-Discrimination Law", "Gender Equality"],
         "clue": "These laws are designed to ensure equal treatment of men and women, but enforcement varies.",
         "image": "gender_equality_laws.gif"
     },
     {
         "question": "I empower women in science and tech, Where coding and labs are no longer a wreck. At UJ, I boost girls in STEM fields bright, Ensuring gender balance feels just right. What am I?",
-        "answer": ["UJ Women in STEM Program", "Women in Science Initiative", "Female STEM Empowerment"],
+        "answer": ["UJ Women in STEM Program", "Women in Science Initiative", "Female STEM Empowerment", "Women in STEM"],
         "clue": "A UJ initiative that promotes female participation and leadership in Science, Technology, Engineering, and Mathematics (STEM) fields.",
-        "image": "uj_women_stem.gif"
+        "image": "women_stem.gif"
     },
     {
         "question": "I am the effort to ensure all girls get the chance to grow, in every class and school we go. When given the tools to learn, equality will finally return. What am I?",
@@ -57,6 +57,6 @@
         "question": "I develop leaders, women who rise, Breaking stereotypes, reaching the skies. Workshops and training, confidence too, I help shape leaders who break through. What am I?",
         "answer": ["UJ Women's Leadership Development Programme", "UJ Leadership for Women", "Women in Leadership Programme"],
         "clue": "Leadership workshops hosted at UJ to empower women staff and students into leadership positions.",
-        "image": "uj_women_leadership.gif"
+        "image": "women_in_leadership.jpg"
     }
 ]

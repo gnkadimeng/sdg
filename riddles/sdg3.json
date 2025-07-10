@@ -3,7 +3,7 @@
         "question": "Many UJ students volunteer at this local hospital known for community healthcare efforts. What's its name?",
         "answer": ["Helen Joseph Hospital", "Baragwanath Hospital (Bara)", "Charlotte Maxeke Hospital"],
         "clue": "It's named after a famous South African activist and located near UJ.",
-        "image": "helen_joseph_hospital.gif"
+        "image": "hospital.gif"
     },
     {
         "question": "I am a UJ initiative that raises awareness about healthy eating and lifestyle choices. What is my name?",
@@ -15,13 +15,13 @@
         "question": "With cheers and races, I come alive. UJ athletes train and strive. Track and field, rugby, soccer too - I host the games that push you through. What am I?",
         "answer": ["UJ Stadium", "UJ Sports Ground", "UJ Track and Field"],
         "clue": "Found at UJ campuses like APK and Soweto, I'm where students gather for matches, fitness, and training.",
-        "image": "uj_stadium.gif"
+        "image": "stadium.jpg"
     },
     {
         "question": "I am a UJ initiative that focuses on mental health support for students. What is my name?",
         "answer": ["UJ Mental Health Services", "Psycad", "UJ Counselling"],
         "clue": "This service provides counseling and mental wellness programs.",
-        "image": "uj_mental_health.gif"
+        "image": "uj_mental_health.jpg"
     },
     {
         "question": "I am a regular UJ campus event where students check their health - blood pressure, HIV status, glucose, and more. What am I?",
@@ -33,7 +33,7 @@
         "question": "I am the UJ space where students work out, lift weights, or join fitness classes - all to boost mental and physical well-being. What am I?",
         "answer": ["UJ Gym", "Campus Gym", "UJ Fitness Center"],
         "clue": "A facility where students exercise to stay fit and healthy.",
-        "image": "uj_gym.gif"
+        "image": "gym.jpeg"
     },
     {
         "question": "I am a UJ program that provides free healthcare services to students in need. What is my name?",
@@ -43,7 +43,7 @@
     },
     {
         "question": "I am a global goal aiming to promote health and well-being for all ages. What am I?",
-        "answer": ["SDG 3: Good Health and Well-being", "Health Goal", "Well-being Goal"],
+        "answer": ["SDG 3: Good Health and Well-being", "Health Goal", "Well-being Goal", "SDG 3"],
         "clue": "This goal focuses on ensuring health care access for everyone, everywhere.",
         "image": "sdg3.gif"
     },

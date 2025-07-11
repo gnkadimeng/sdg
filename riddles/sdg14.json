@@ -1,62 +1,62 @@
 [
   {
-    "question": "I'm a blue expanse with hidden treasures, but I suffer when humans ignore their measures. UJ studies me to protect my might — what am I, out of sight?",
-    "answer": ["The Ocean", "Sea", "Marine ecosystem"],
+    "question": "I'm a blue expanse with hidden treasures, but I suffer when humans ignore their measures. UJ studies me to protect my might. What am I, out of sight?",
+    "answer": ["Ocean", "Sea", "Marine ecosystem"],
     "clue": "The Water and Health Research Centre at UJ helps monitor me.",
     "image": "ocean.gif"
   },
   {
-    "question": "I float in waves where dolphins play, mistaken for food along the way. UJ studies how to track me down, before I drag marine life to drown.",
-    "answer": ["Plastic bag", "Floating debris", "Microplastic source"],
-    "clue": "UJ researchers explore microplastics and their impact.",
-    "image": "plastic_bag.gif"
+    "question": "I wear blue and fight the flow, Stopping waste wherever I go. From taps and leaks to spreading the word, Saving water is what you've heard. What am I?",
+    "answer": ["Water Warriors", "UJ Water Conservation Team", "Water-Saving Champions"],
+    "clue": "A UJ student volunteer group dedicated to conserving water, raising awareness, and encouraging sustainable water use.",
+    "image": "water_warriors.gif"
   },
   {
-    "question": "I'm colourful but fragile, under sea and sun. Pollution and heat have made me come undone. UJ works with marine teams to protect my sheen. What am I?",
-    "answer": ["Coral reef", "Marine sponge field", "Seagrass bed"],
-    "clue": "Marine biodiversity research at UJ helps preserve me.",
-    "image": "coral_reef.gif"
+    "question": "I stop the plastic before it flows, Into rivers where it never goes. From bins to campaigns, I stand tall, Fighting waste - for oceans, for all. What am I?",
+    "answer": ["Plastic-Free UJ Campaign", "Waste Reduction Drive", "Say No to Plastics"],
+    "clue": "A UJ program or campaign focused on reducing plastic use and litter that could reach water systems.",
+    "image": "plastic_campaign.gif"
   },
   {
-    "question": "I take too much, leave too few. I disrupt the balance of ocean's crew. UJ's research on my harm is clear — who am I that fishers fear?",
-    "answer": ["Overfishing", "Bycatch", "Illegal fishing"],
-    "clue": "UJ supports Marine Protected Areas to fight this.",
-    "image": "overfishing.gif"
+    "question": "When rain runs off, I guard the gate, Stopping trash before it's too late. From campus roads, to drains unseen, I keep rivers flowing fresh and clean. What am I?",
+    "answer": ["Stormwater Filter System", "Pollution Trap", "Drain Protection Barrier"],
+    "clue": "A system at UJ preventing pollutants from stormwater drains entering rivers and aquatic ecosystems.",
+    "image": "stormwater_filter.gif"
   },
   {
-    "question": "Where rivers meet the sea, you'll often find me. I'm home to mangroves, and life runs free. What coastal habitat could I be?",
-    "answer": ["Estuary", "Mangrove forest", "Salt marsh"],
-    "clue": "I mix salt and fresh waters and support rich biodiversity.",
-    "image": "estuary.gif"
+    "question": "I am a marsh, a greenish space, Cleaning water with natural grace. UJ protects me, a habitat fair, For creatures above and those under there. What am I?",
+    "answer": ["Wetland Conservation Area", "UJ Biodiversity Wetland", "Natural Water Filter"],
+    "clue": "A wetland ecosystem near or studied by UJ, essential for filtering water and protecting biodiversity.",
+    "image": "wetland.gif"
   },
   {
-    "question": "I make coastlines disappear and fill the air with coastal fear. UJ studies me with rising concern — what watery threat do we all learn?",
-    "answer": ["Sea-level rise", "Tidal surge", "Coastal erosion"],
-    "clue": "UJ's sustainability research tracks climate-related causes.",
-    "image": "sea_level_rise.gif"
+    "question": "In the city's heart, I quietly thrive, A wetland oasis where creatures survive. Birds and frogs, with plants abound, At UJ, I'm sacred ground. What am I?",
+    "answer": ["UJ Island", "Campus Wetland", "UJ Biodiversity Sanctuary"],
+    "clue": "A real biodiversity-rich wetland near UJ's APK campus, used for research, education, and conservation, protecting life below water and sustaining urban ecosystems.",
+    "image": "uj_island.gif"
   },
   {
-    "question": "At res I drip less, thanks to tech and care — saving water with each shower we share. What practice helps UJ conserve with pride?",
-    "answer": ["Water-saving", "Water Warriors", "Water conservation plan"],
-    "clue": "This initiative reduces water use in student residences.",
-    "image": "water_saving_res.gif"
+    "question": "I take your shower and sink's old stream, Clean it up - not as dirty as it seems. For gardens and flushing, I play my part, Saving fresh water - I'm pretty smart. What am I?",
+    "answer": ["Greywater Reuse System", "Water Recycling Plant", "Sustainable Water Use Solution"],
+    "clue": "A water-saving system at UJ that reduces the demand on freshwater and protects rivers by reusing water.",
+    "image": "greywater.gif"
   },
   {
-    "question": "I bring marine studies into class, preparing students to act fast. UJ includes me in what it teaches — from sandy shores to coral beaches.",
+    "question": "I bring marine studies into class, preparing students to act fast. UJ includes me in what it teaches -from sandy shores to coral beaches.",
     "answer": ["Ocean Education", "Marine awareness", "Blue learning"],
     "clue": "UJ embeds marine conservation into learning and research.",
     "image": "ocean_research.gif"
   },
   {
-    "question": "I teach green thinking, water care too, guiding students on what to do. My lectures speak of Earth's distress — what program helps UJ students progress?",
-    "answer": ["SDG Curriculum", "Environmental Studies Program", "Climate Action Course"],
+    "question": "I teach green thinking, water care too, guiding students on what to do. My lectures speak of Earth's distress. What program helps UJ students progress?",
+    "answer": ["SDG Curriculum"],
     "clue": "They cover climate, oceans, energy, and more.",
     "image": "sustainability_courses.gif"
   },
   {
-    "question": "I bubble and flow in a campus square, ducks swim by without a care. A landmark loved and full of cheer — what am I that students hold dear?",
-    "answer": ["APK Fountain", "UJ fountain", "Campus water feature"],
+    "question": "I bubble and flow in a campus square, ducks swim by without a care. A landmark loved and full of cheer. What am I that students hold dear?",
+    "answer": ["APK Fountain", "UJ fountain"],
     "clue": "I'm at the heart of APK, where ducks relax and selfies are taken.",
-    "image": "apk_fountain.gif"
+    "image": "fountain.gif"
   }
 ]

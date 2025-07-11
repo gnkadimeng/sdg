@@ -9,7 +9,7 @@
         "question": "When the clouds cry, I collect with care, Storing for gardens or flushing elsewhere. On APK and DFC, you'll find me stand, Saving water, sustaining the land. What am I?",
         "answer": ["Rainwater Harvesting System", "Water Collection Tanks", "Stormwater Capture"],
         "clue": "A system at UJ campuses that collects rainwater for non-drinking purposes like irrigation or toilet flushing.",
-        "image": "rainwater_system.gif"
+        "image": "rainwater.gif"
     },
     {
         "question": "I clean your clothes without being seen, working behind the scenes to make them pristine. What am I?",
@@ -45,13 +45,13 @@
         "question": "I'm on taps and showers, helping water last. With sensors or flow controls, I reduce waste fast. At UJ, I help cut the flow, So water-wise habits start to grow. What am I?",
         "answer": ["Water-Saving Devices", "Low-Flow Fixtures", "Conservation Tools"],
         "clue": "Devices like tap aerators, low-flow shower heads, and sensors used at UJ to reduce water consumption.",
-        "image": "water_savers.gif"
+        "image": "water_savers.png"
     },
     {
         "question": "I drip from pipes, but don't go to waste. UJ reuses me with mindful haste. In gardens and systems, I find new life. What am I?",
         "answer": ["Greywater", "Recycled Water", "Reclaimed Water"],
         "clue": "UJ collects and repurposes gently used water from showers, sinks, and laundry to reduce waste.",
-        "image": "greywater.gif"
+        "image": "greywater.jpg"
     },
     {
         "question": "I am a collaborative group at UJ, addressing water security issues in the city each day. Bringing together experts and the community, to tackle challenges in unity. What am I?",

@@ -1,20 +1,32 @@
-# Use the official Python image
-FROM python:3.13.3
+FROM python:3.11-slim
 
-# Set the working directory inside the container
+# Set working directory
 WORKDIR /app
 
-# Copy the requirements first to install dependencies (improves caching)
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    gcc \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install Python dependencies
 COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Install the required Python packages
-RUN pip3 install -r requirements.txt
-
-# Copy the rest of the application code
+# Copy app files
 COPY . .
 
-# Expose the port Flask will run on
+# Set environment variables
+ENV FLASK_APP=app.py
+ENV FLASK_ENV=production
+ENV PYTHONPATH=/app
+
+# Create non-root user for security
+RUN adduser --disabled-password --gecos '' appuser && \
+    chown -R appuser:appuser /app
+USER appuser
+
+# Expose Flask port
 EXPOSE 5000
 
-# Define the default command to run the app
-CMD ["python", "-m", "flask", "run", "--host=0.0.0.0"]
+# Use Gunicorn for production
+CMD ["gunicorn", "--bind", "0.0.0.0:5000", "--workers", "4", "app:app"]

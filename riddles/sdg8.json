@@ -12,7 +12,7 @@
         "image": "cfe.gif"
     },
     {
-        "question": "I give you tasks, small but fair, On campus jobs with income to spare. Supporting fees and skills on cue, At UJ, I create work for you. What am I?",
+        "question": "I give you tasks, small but fair, On-Campus jobs with income to spare. Supporting fees and skills on cue, At UJ, I create work for you. What am I?",
         "answer": ["Student Assistant Program", "UJ Work-Study Scheme", "Campus Jobs for Students", "Tutoring", "student jobs"],
         "clue": "A work-study program or on-campus job initiative that UJ offers to students to help them earn while they learn.",
         "image": "student_jobs.gif"
@@ -37,7 +37,7 @@
     },
     {
         "question": "I connect graduates far and wide, Helping careers with UJ pride. Networking, jobs, mentorship too, Stay with UJ - I'm here for you. What am I?",
-        "answer": ["UJ Alumni Network", "Graduate Success Platform", "Career & Alumni Network"],
+        "answer": ["UJ Alumni Network", "Graduate Success Platform", "Career & Alumni Network", "UJ Alumni"],
         "clue": "A UJ platform that supports graduates with networking, job connections, and career development after they complete their studies.",
         "image": "alumni.gif"
     },

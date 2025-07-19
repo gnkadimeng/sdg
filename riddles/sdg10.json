@@ -42,19 +42,19 @@
         "image": "anti_discrimination.gif"
     },
     {
-        "question": "I welcome students from near and far,\nBuilding bridges from wherever you are.\nWith culture, support, and smiles so wide,\nUJ makes sure you belong inside. What am I?",
+        "question": "I welcome students from near and far, Building bridges from wherever you are. With culture, support, and smiles so wide, UJ makes sure you belong inside. What am I?",
         "answer": ["International Office", "International Student Support Office", "UJ Internationalisation", "Global Inclusion Desk"],
         "clue": "A UJ office or programme that supports international students with inclusion, culture adaptation, and belonging.",
         "image": "international_office.gif"
     },
     {
         "question": "I am a device that helps you see, bringing text to life for me. At UJ's library, I stand by, ensuring knowledge is always nigh. What am I?",
-        "answer": ["Braille display", "Tactile reader", "Braille device"],
+        "answer": ["Braille display", "Tactile reader", "Braille device", "Braille"],
         "clue": "This device assists those with visual impairments in reading.",
         "image": "braille.gif"
     },
     {
-        "question": "I drive change and fairness too,\nFighting racism, sexism, and bias through.\nPolicies and training make prejudice fall,\nAt UJ, I empower all. What am I?",
+        "question": "I drive change and fairness too, Fighting racism, sexism, and bias through. Policies and training make prejudice fall, At UJ, I empower all. What am I?",
         "answer": ["Transformation Office", "Equity and Inclusion Office", "UJ Diversity and Equity Hub"],
         "clue": "The office responsible for driving equity, diversity, and inclusion at UJ.",
         "image": "transformation_office.gif"

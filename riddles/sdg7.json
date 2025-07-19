@@ -36,7 +36,7 @@
         "image": "motion_sensors.gif"
     },
     {
-        "question": "Charge me up; I store the sun, Powering devices when day is done. What am I?",
+        "question": "Charge me up; I store the sun. Powering devices when day is done. What am I?",
         "answer": ["Solar Battery", "Energy storage", "Solar power bank"],
         "clue": "This stores solar energy to be used later, especially when the sun isn't shining.",
         "image": "solar_battery.gif"

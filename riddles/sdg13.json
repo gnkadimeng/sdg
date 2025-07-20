@@ -6,13 +6,13 @@
     "image": "trees.gif"
   },
   {
-    "question": "I track the carbon that you release,\nFrom travel, lights, and food - oh please!\nAt UJ, I help you see,\nHow less can truly set us free. What am I?",
+    "question": "I track the carbon that you release, From travel, lights, and food - oh please! At UJ, I help you see, How less can truly set us free. What am I?",
     "answer": ["Carbon Footprint Calculator", "Emissions Tracker", "Climate Impact Tool"],
     "clue": "A tool UJ uses to measure its emissions and help reduce carbon output.",
-    "image": "carbon_tracker.gif"
+    "image": "carbon_tracker.jpg"
   },
   {
-    "question": "I teach you how the climate’s changed,\nWhy floods and fires are rearranged.\nWorkshops, talks, and lessons too,\nClimate knowledge starts with who? What am I?",
+    "question": "I teach you how the climate's changed, Why floods and fires are rearranged. Workshops, talks, and lessons too, Climate knowledge starts with who? What am I?",
     "answer": ["Climate Literacy Campaign", "UJ Climate Education", "Sustainability Awareness Drive"],
     "clue": "A UJ awareness campaign that educates staff and students about climate change causes, impacts, and solutions.",
     "image": "climate_awareness.gif"
@@ -24,9 +24,9 @@
     "image": "greenhouse.gif"
   },
   {
-    "question": "With maps and graphs, I seek the truth,\nTracking air, heat, and carbon’s proof.\nAt UJ labs, my work is clear,\nTo fight climate change both far and near. What am I?",
+    "question": "With maps and graphs, I seek the truth, Tracking air, heat, and carbon’s proof. At UJ labs, my work is clear, To fight climate change both far and near. What am I?",
     "answer": ["Climate Research Lab", "UJ Sustainability Studies", "Urban Heat & Air Quality Research"],
-    "clue": "UJ’s research on climate issues like air pollution, urban heat islands, and sustainable solutions.",
+    "clue": "UJ's research on climate issues like air pollution, urban heat islands, and sustainable solutions.",
     "image": "climate_lab.gif"
   },
   {
@@ -42,7 +42,7 @@
     "image": "bicycle.gif"
   },
   {
-    "question": "When floods rise or fires flare,\nI guide UJ with plans to prepare.\nEvacuate here or shelter there,\nI keep us safe from climate’s scare. What am I?",
+    "question": "When floods rise or fires flare, I guide UJ with plans to prepare. Evacuate here or shelter there, I keep us safe from climate’s scare. What am I?",
     "answer": ["Disaster Risk Management Plan", "Emergency Response Strategy", "Climate Safety Framework"],
     "clue": "A UJ plan that prepares for climate-related disasters like floods, heatwaves, or storms.",
     "image": "disaster_plan.gif"
@@ -54,7 +54,7 @@
     "image": "fossil_fuels.gif"
   },
   {
-    "question": "My roots dig deep, my leaves grow wide,\nI shade the earth and turn the tide.\nAt UJ, I fight CO₂,\nMore trees planted thanks to who? What am I?",
+    "question": "My roots dig deep, my leaves grow wide, I shade the earth and turn the tide. At UJ, I fight CO₂, More trees planted thanks to who? What am I?",
     "answer": ["Tree Planting Campaign", "UJ Reforestation Drive", "Urban Greening Project"],
     "clue": "A UJ initiative for planting trees and restoring greenery to capture carbon and fight climate change.",
     "image": "tree_planting.gif"

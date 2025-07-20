@@ -33,13 +33,13 @@
     "question": "In the city's heart, I quietly thrive, A wetland oasis where creatures survive. Birds and frogs, with plants abound, At UJ, I'm sacred ground. What am I?",
     "answer": ["UJ Island", "Campus Wetland", "UJ Biodiversity Sanctuary"],
     "clue": "A real biodiversity-rich wetland near UJ's APK campus, used for research, education, and conservation, protecting life below water and sustaining urban ecosystems.",
-    "image": "uj_island.gif"
+    "image": "uj_island.jpg"
   },
   {
     "question": "I take your shower and sink's old stream, Clean it up - not as dirty as it seems. For gardens and flushing, I play my part, Saving fresh water - I'm pretty smart. What am I?",
     "answer": ["Greywater Reuse System", "Water Recycling Plant", "Sustainable Water Use Solution"],
     "clue": "A water-saving system at UJ that reduces the demand on freshwater and protects rivers by reusing water.",
-    "image": "greywater.gif"
+    "image": "greywater1.gif"
   },
   {
     "question": "I bring marine studies into class, preparing students to act fast. UJ includes me in what it teaches -from sandy shores to coral beaches.",
@@ -55,8 +55,8 @@
   },
   {
     "question": "I bubble and flow in a campus square, ducks swim by without a care. A landmark loved and full of cheer. What am I that students hold dear?",
-    "answer": ["APK Fountain", "UJ fountain"],
+    "answer": ["APK Fountain", "UJ fountain", "Fountain"],
     "clue": "I'm at the heart of APK, where ducks relax and selfies are taken.",
-    "image": "fountain.gif"
+    "image": "fountain2.jpg"
   }
 ]

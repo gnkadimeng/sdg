@@ -1,9 +1,9 @@
 [
   {
     "question": "I stand tall and green, a home to many creatures unseen. I provide air that's clean and wood that's keen. What am I?",
-    "answer": ["Tree Planting Campaign", "UJ Greening Drive", "Urban Reforestation Project"],
+    "answer": ["Tree Plant", "UJ Greening Drive", "Urban Reforestation Project", "Trees", "Tree"],
     "clue": "I help UJ's carbon sequestration and biodiversity goals.",
-    "image": "tree.gif"
+    "image": "tree2.png"
   },
   {
     "question": "I wave with golden grace, a natural South African space. Lions might roam, eagles might soar — what landscape do we adore?",
@@ -15,7 +15,7 @@
     "question": "I bring life back to barren land, planting roots with careful hand. UJ plants me by the thousand — what greening act is proudly grounded?",
     "answer": ["Reforestation", "Afforestation", "Tree planting"],
     "clue": "Part of UJ's 50,000-tree campaign for ecosystem revival.",
-    "image": "reforestation.gif"
+    "image": "tree_planting.gif"
   },
   {
     "question": "I slither unseen in grass and tree, misunderstood but vital to be. I help balance pests and keep nature right. What reptile hides in plain sight?",
@@ -48,10 +48,10 @@
     "image": "research_register.gif"
   },
   {
-    "question": "I innovate for a greener earth, where sustainable tech finds its worth. From waste to energy, I lead the way — which UJ station saves the day?",
-    "answer": ["UJ PEETS", "Green Innovation Hub", "EcoTech Center"],
-    "clue": "I support green tech and environmental innovation.",
-    "image": "uj_peets.gif"
+    "question": "I stop the weeds that don't belong. Invading species that grow too strong. Protecting natives from their fight, At UJ, I set it right. What am I?",
+    "answer": ["Invasive Species Removal / Alien Plant Eradication / Ecosystem Restoration Team"],
+    "clue": "A program where UJ removes invasive alien plants that harm native species and ecosystems.",
+    "image": "invasive_species.gif"
   },
   {
     "question": "I'm the SDG with forests in mind, where life on land is redefined. Protecting creatures, soils, and seeds — which global goal meets all these needs?",

@@ -21,10 +21,10 @@
         "question": "I'm trees, gardens, spaces green, A campus where fresh air is seen. At UJ, I make the concrete light, With nature's touch, the future's bright. What am I?",
         "answer": ["Campus Green Spaces", "UJ Urban Gardens", "Biodiversity Courtyard"],
         "clue": "Green spaces, gardens, and biodiversity areas on UJ campuses that enhance well-being and environmental sustainability.",
-        "image": "campus_green.gif"
+        "image": "campus_green.jpeg"
     },
     {
-        "question": "Sensors and systems, data so wide, Help UJ campuses run with pride. Energy-saving, safe, and clean, I make the campus smart and green. What am I?",
+        "question": "Sensors and systems, data so wide. Help UJ campuses run with pride. Energy-saving, safe, and clean, I make the campus smart and green. What am I?",
         "answer": ["Smart Campus System", "UJ Smart Infrastructure", "Sustainable Campus Management"],
         "clue": "Technology-driven solutions at UJ that enhance campus sustainability, safety, and operational efficiency.",
         "image": "smart_campus.gif"
@@ -39,7 +39,7 @@
         "question": "In a rural place, I stand with pride, Bringing clean water, power, and tech worldwide. With UJ's help, I show the way, How smart villages can lead the day. What am I?",
         "answer": ["Gwakani Smart Village", "UJ Smart Village Project", "Sustainable Village Initiative"],
         "clue": "A rural development project led by UJ, offering sustainable solutions like clean energy, digital access, and water systems to the Gwakani community.",
-        "image": "smart_village.gif"
+        "image": "smart_village.png"
     },
     {
         "question": "From plastic, paper, waste, and cans, I turn them into new life plans. Jobs and products come from me, Reducing waste sustainably. What am I?",

@@ -328,6 +328,16 @@ main() {
             deploy_test_app
             ;;
         2)
+            # First check if there's a failed deployment and clean it up
+            if az containerapp show --name $APP_NAME --resource-group $RESOURCE_GROUP &> /dev/null; then
+                APP_URL=$(az containerapp show --name $APP_NAME --resource-group $RESOURCE_GROUP --query "properties.configuration.ingress.fqdn" -o tsv)
+                if [[ -z "$APP_URL" || "$APP_URL" == "null" ]]; then
+                    print_warning "Found existing failed deployment. Cleaning up first..."
+                    az containerapp delete --name $APP_NAME --resource-group $RESOURCE_GROUP --yes
+                    print_success "Cleaned up failed deployment"
+                fi
+            fi
+            
             if check_docker_image; then
                 DOCKER_IMAGE="ghcr.io/gnkadimeng/sdg:latest"
                 deploy_real_app_with_image "$DOCKER_IMAGE"

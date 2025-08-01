@@ -1,15 +1,15 @@
 [
     {
-        "question": "I have walls filled with knowledge, open to all who seek. Within me, stories and information freely speak. What am I?",
-        "answer": ["Library", "Knowledge Centre", "UJ Learning Hub"],
-        "clue": "This place on campus offers books, resources, and a quiet place to study.",
-        "image": "library.gif"
+        "question": "I bring UJ beyond the gate, To townships, cities - communities great. Teaching, serving, lending a hand, Building futures across the land. What am I?",
+        "answer": ["Community Engagement", "Community Outreach Program", "UJ Service Learning", "UJ Social Impact Projects"],
+        "clue": "UJ's programs that engage in community development, sustainability, health, and education outside campus.",
+        "image": "community_engagement.gif"
     },
     {
-        "question": "I am a space where art comes alive, showcasing culture and creativity's drive. Open to all, come rain or shine, what place am I, so divine?",
-        "answer": ["Art Centre", "Art Gallery", "UJ Exhibition Hall"],
-        "clue": "This campus venue hosts exhibitions and celebrates artistic endeavors.",
-        "image": "art_gallery.gif"
+        "question": "Bins in colors, signs that show, I guide where waste and recycling go. UJ's cleaner because of me, Less waste, more sustainability. What am I?",
+        "answer": ["Waste Sorting Station", "Recycling Zones", "UJ Waste Separation"],
+        "clue": "A campus program encouraging waste sorting to promote recycling and reduce landfill waste.",
+        "image": "recycling.gif"
     },
     {
         "question": "I am green and open, a breath of fresh air, where students and locals gather without a care. What am I?",
@@ -18,40 +18,40 @@
         "image": "fountain.gif"
     },
     {
-        "question": "I capture the rain to nourish the land, a sustainable practice carefully planned. What system am I?",
-        "answer": ["Rainwater Harvesting System", "Water Collection Tank", "Rain Catcher"],
-        "clue": "This method collects water for irrigation and reduces reliance on municipal supply.",
-        "image": "rainwater.gif"
+        "question": "I'm trees, gardens, spaces green, A campus where fresh air is seen. At UJ, I make the concrete light, With nature's touch, the future's bright. What am I?",
+        "answer": ["Campus Green Spaces", "UJ Urban Gardens", "Biodiversity Courtyard"],
+        "clue": "Green spaces, gardens, and biodiversity areas on UJ campuses that enhance well-being and environmental sustainability.",
+        "image": "campus_green.jpeg"
     },
     {
-        "question": "I transport many without delay, reducing emissions along the way. What am I?",
-        "answer": ["Electric Bus", "e-Bus", "Battery Shuttle"],
-        "clue": "This mode of transportation moves numerous passengers simultaneously, often using designated lanes.",
-        "image": "electric_vehicle.gif"
+        "question": "Sensors and systems, data so wide. Help UJ campuses run with pride. Energy-saving, safe, and clean, I make the campus smart and green. What am I?",
+        "answer": ["Smart Campus System", "UJ Smart Infrastructure", "Sustainable Campus Management"],
+        "clue": "Technology-driven solutions at UJ that enhance campus sustainability, safety, and operational efficiency.",
+        "image": "smart_campus.gif"
     },
     {
-        "question": "I light up the night with energy clean, atop buildings, I'm often seen. What am I?",
-        "answer": ["Solar Panels", "Photovoltaic Array", "Rooftop Solar"],
-        "clue": "These panels convert sunlight into electricity, promoting renewable energy use.",
-        "image": "solar_panels.gif"
+        "question": "I link UJ with Joburg town, For cleaner streets and cutting waste down. With data, research, and plans in play, We shape a greener urban way. What am I?",
+        "answer": ["Urban Sustainability Partnership", "UJ-City of Johannesburg Collaboration", "Sustainable Cities Research"],
+        "clue": "A collaboration between UJ and Johannesburg city to develop sustainable urban solutions through research, data, and policy.",
+        "image": "urban_partnership.gif"
     },
     {
-        "question": "I am a pathway for those on foot, promoting health and a smaller carbon footprint. What am I?",
-        "answer": ["Pedestrian Walkway", "Campus Walkway", "Footpath"],
-        "clue": "This designated area allows pedestrians to navigate the campus safely.",
-        "image": "pedestrian.gif"
+        "question": "In a rural place, I stand with pride, Bringing clean water, power, and tech worldwide. With UJ's help, I show the way, How smart villages can lead the day. What am I?",
+        "answer": ["Gwakani Smart Village", "UJ Smart Village Project", "Sustainable Village Initiative"],
+        "clue": "A rural development project led by UJ, offering sustainable solutions like clean energy, digital access, and water systems to the Gwakani community.",
+        "image": "smart_village.png"
     },
     {
-        "question": "In the digital realm, I stand tall, ensuring access and equity for all. I read aloud and magnify, so everyone can see the sky. What am I?",
-        "answer": ["Screen reader", "Text-to-speech software", "Accessibility software"],
-        "clue": "Think of software that assists those with visual impairments.",
-        "image": "screen_reader.gif"
+        "question": "From plastic, paper, waste, and cans, I turn them into new life plans. Jobs and products come from me, Reducing waste sustainably. What am I?",
+        "answer": ["Circular Economy Hub", "UJ Recycling Innovation", "Waste-to-Product Centre"],
+        "clue": "A UJ initiative or research project that supports recycling, upcycling, and waste-to-value solutions within communities and campuses.",
+        "image": "circular_economy.gif"
     },
     {
-        "question": "I am a dwelling affordable and neat, providing shelter on a student street. What am I?",
-        "answer": ["Student Residence", "Campus Housing", "UJ Dormitory"],
-        "clue": "These accommodations offer reasonably priced living spaces for learners.",
-        "image": "student_residence.gif"
+        "question": "Bricks and beams, but smarter still, Saving water, energy - that's the skill. At UJ, I rise with eco design, A building future that's truly fine. What am I?",
+        "answer": ["Sustainable Building", "Green Infrastructure", "Eco-Friendly Campus Design"],
+        "clue": "A UJ building or project designed with green construction standards - using solar panels, greywater, and energy efficiency systems.",
+        "image": "green_building.gif"
     },
     {
         "question": "I am a report detailing goals and deeds, showcasing progress and community needs. What am I?",

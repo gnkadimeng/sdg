@@ -1,27 +1,27 @@
 [
     {
         "question": "I take your knowledge from class to site, Turning theory to jobs - that feels right! I'm where UJ students work and grow, Earning skills for careers they'll soon know. What am I?",
-        "answer": ["Work-Integrated Learning (WIL)", "UJ Internships", "WIL"],
+        "answer": ["Work-Integrated Learning (WIL)", "UJ Internships", "WIL", "Work Integrated Learning"],
         "clue": "A UJ program that allows students to apply classroom knowledge through real-world workplace experiences, internships, or industry placements.",
         "image": "wil.gif"
     },
     {
         "question": "Got a business idea burning bright? I help you shape it, launch it right. From workshops to mentors, funding too, I help UJ students become something new. What am I?",
-        "answer": ["Centre for Entrepreneurship (CFE)", "UJ Business Incubator", "UJ Startup Support"],
+        "answer": ["Centre for Entrepreneurship (CFE)", "UJ Business Incubator", "UJ Startup Support", "CFE", "Centre for Entrepreneurship"],
         "clue": "A UJ initiative that supports student entrepreneurs in starting businesses and learning entrepreneurial skills.",
         "image": "cfe.gif"
     },
     {
-        "question": "I give you tasks, small but fair, On campus jobs with income to spare. Supporting fees and skills on cue, At UJ, I create work for you. What am I?",
-        "answer": ["Student Assistant Program", "UJ Work-Study Scheme", "Campus Jobs for Students"],
+        "question": "I give you tasks, small but fair, On-Campus jobs with income to spare. Supporting fees and skills on cue, At UJ, I create work for you. What am I?",
+        "answer": ["Student Assistant Program", "UJ Work-Study Scheme", "Campus Jobs for Students", "Tutoring", "student jobs"],
         "clue": "A work-study program or on-campus job initiative that UJ offers to students to help them earn while they learn.",
         "image": "student_jobs.gif"
     },
     {
         "question": "Got a great idea, a patent to file? I help researchers go the extra mile. Turning knowledge into business and trade, I make sure UJ's innovations are paid. What am I?",
-        "answer": ["Technology Transfer Office (TTO)", "UJ Innovation Office", "Research Commercialisation Hub"],
+        "answer": ["Technology Transfer Office (TTO)", "UJ Innovation Office", "Research Commercialisation Hub", "TTO", "Technology Transfer Office"],
         "clue": "A UJ office that helps students and researchers turn innovations into startups, patents, and real-world solutions.",
-        "image": "tto.gif"
+        "image": "tto.jpeg"
     },
     {
         "question": "Before you graduate and enter the race, I help with your CV and interview face. With guidance, tips, and career flair, I help you step into work out there. What am I?",
@@ -37,13 +37,13 @@
     },
     {
         "question": "I connect graduates far and wide, Helping careers with UJ pride. Networking, jobs, mentorship too, Stay with UJ - I'm here for you. What am I?",
-        "answer": ["UJ Alumni Network", "Graduate Success Platform", "Career & Alumni Network"],
+        "answer": ["UJ Alumni Network", "Graduate Success Platform", "Career & Alumni Network", "UJ Alumni"],
         "clue": "A UJ platform that supports graduates with networking, job connections, and career development after they complete their studies.",
         "image": "alumni.gif"
     },
     {
         "question": "Short but strong, I help you upskill, For work, promotion, or leadership thrill. At UJ, my courses are sharp and fast, Preparing careers designed to last. What am I?",
-        "answer": ["Continuing Education Programmes (CEP)", "UJ Short Courses", "Professional Upskilling"],
+        "answer": ["Continuing Education Programmes (CEP)", "UJ Short Courses", "Professional Upskilling", "CEP", "Continuing Education Programmes"],
         "clue": "A program offering professional short courses and skills-based training for lifelong learning and career development.",
         "image": "cep.gif"
     },

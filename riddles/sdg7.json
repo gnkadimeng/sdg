@@ -7,7 +7,7 @@
     },
     {
         "question": "I turn sunlight, wind, and waste to power, Supporting green skills by the hour. At DFC, I lead the way, For clean tech jobs and a greener day. What am I?",
-        "answer": ["UJ PEETS", "Process, Energy, Environment, and Technology Station", "UJ Green Tech Hub"],
+        "answer": ["UJ PEETS", "Process, Energy, Environment, and Technology Station", "UJ Green Tech Hub", "PEETS"],
         "clue": "A UJ innovation station that drives renewable energy, energy efficiency, and sustainable technology solutions for students, businesses, and communities.",
         "image": "peets_station.gif"
     },
@@ -36,7 +36,7 @@
         "image": "motion_sensors.gif"
     },
     {
-        "question": "Charge me up; I store the sun, Powering devices when day is done. What am I?",
+        "question": "Charge me up; I store the sun. Powering devices when day is done. What am I?",
         "answer": ["Solar Battery", "Energy storage", "Solar power bank"],
         "clue": "This stores solar energy to be used later, especially when the sun isn't shining.",
         "image": "solar_battery.gif"

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Security Question | SDG Escape Room{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+  <div class="col-md-6">
+    <div class="text-center mb-4">
+      <img src="{{ url_for('static', filename='img/Logo.png') }}" alt="Logo" style="height: 80px;">
+    </div>
+    <div class="card shadow p-4">
+      <h2 class="text-center mb-4">🔐 Security Question</h2>
+      <form method="POST">
+        <div class="mb-3">
+          <label class="form-label">Question:</label>
+          <p class="form-control-plaintext">{{ question }}</p>
+        </div>
+        <div class="mb-3">
+          <label for="answer" class="form-label">Your Answer</label>
+          <input type="text" class="form-control" id="answer" name="answer" required>
+        </div>
+        <div class="d-grid">
+          <button type="submit" class="btn btn-primary">Verify</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

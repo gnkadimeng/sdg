@@ -71,3 +71,48 @@
     border-radius: 0;
   }
   
+
+  .card {
+    border-radius: 12px;
+  }
+
+  .input-group {
+    margin-top: 20px;
+    flex-wrap: nowrap;
+  }
+
+  .input-group input[type="text"] {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  @media (max-width: 768px) {
+    .input-group {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .input-group input[type="text"] {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .input-group .btn {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 576px) {
+    h2.fw-bold {
+      font-size: 1.5rem;
+    }
+
+    .lead {
+      font-size: 1rem;
+    }
+
+    .btn, input[type="text"] {
+      font-size: 1rem;
+    }
+  }
+

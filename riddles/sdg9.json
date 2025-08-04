@@ -1,19 +1,19 @@
 [
     {
-        "question": "I'm where creativity meets machine,With 3D printers and tools unseen. Students innovate, design, and create, A future of builders I help cultivate. What am I?",
-        "answer": ["UJ Makerspace", "UJ Design Lab", "Innovation Workshop"],
+        "question": "I'm where creativity meets machine, with 3D printers and tools unseen. Students innovate, design, and create, A future of builders I help cultivate. What am I?",
+        "answer": ["UJ Makerspace", "UJ Design Lab", "Innovation Workshop", "Makerspace"],
         "clue": "A UJ space where students turn ideas into prototypes using tech like 3D printers, CNC machines, and design tools.",
-        "image": "makerspace.gif"
+        "image": "makerspace.png"
     },
     {
-        "question": "I turn rubbish into power anew,What you throw away, I value too. At UJ, I lead green innovation's race, Bringing clean energy from waste. What am I?",
+        "question": "I turn rubbish into power anew, what you throw away, I value too. At UJ, I lead green innovation's race, Bringing clean energy from waste. What am I?",
         "answer": ["Waste-to-Energy Plant", "UJ Circular Economy Lab", "Sustainable Energy from Waste"],
         "clue": "A UJ research area that converts waste materials into usable energy or fuel, supporting clean industries and the circular economy.",
         "image": "waste_energy.gif"
     },
     {
-        "question": "At UJ, minds meet, ideas ignite, To solve problems and make futures bright. It's a space where innovation is key, A place of research, what could it be?",
-        "answer": ["University of Johannesburg's research labs", "UJ Innovation Hubs", "Research Centres"],
+        "question": "At UJ, minds meet, ideas ignite, to solve problems and make futures bright. It's a space where innovation is key, A place of research, what could it be?",
+        "answer": ["University of Johannesburg's research labs", "UJ Innovation Hubs", "Research Centres", "UJ Lab"],
         "clue": "It's where students and professors work together to create new solutions.",
         "image": "research_lab.gif"
     },
@@ -45,7 +45,7 @@
         "question": "Bricks and beams, but smarter made, I help buildings grow in green parade. Energy-saving, strong, and bright, UJ builds the future right. What am I?",
         "answer": ["Sustainable Construction Lab", "Green Building Research", "Eco-Infrastructure Project"],
         "clue": "A UJ research focus area on sustainable building, green construction materials, and energy-efficient infrastructure.",
-        "image": "green_building.gif"
+        "image": "smart_building.gif"
     },
     {
         "question": "I can build, I can think, But unlike you, I do not blink. At UJ, they teach me well, I work with humans, can you tell?",
@@ -55,7 +55,7 @@
     },
     {
         "question": "With bridges, towers, water, and roads, I solve the city's heavy loads. At UJ, engineers think ahead, To build safe futures where none will dread. What am I?",
-        "answer": ["Faculty of Engineering and the Built Environment", "UJ Engineering Innovation", "Urban Solutions Hub", "FEBE"],
+        "answer": ["Faculty of Engineering and the Built Environment", "UJ Engineering Innovation", "Urban Solutions Hub", "FEBE", "Faculty of Engineering"],
         "clue": "The faculty and its labs where civil, electrical, mechanical, and industrial engineering innovations happen.",
         "image": "febe.gif"
     }

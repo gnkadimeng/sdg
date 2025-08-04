@@ -33,18 +33,23 @@ def register():
         email = request.form['email']
         password = request.form['password']
         confirmpassword = request.form['confirmPassword']
+        security_question = request.form['securityQuestion']
+        security_answer = request.form['securityAnswer'].lower().strip()  # normalize answer
 
         if password != confirmpassword:
             flash("Passwords do not match.", "danger")
             return render_template('register.html')
 
         hashed_password = bcrypt.generate_password_hash(password).decode('utf-8')
+        hashed_answer = bcrypt.generate_password_hash(security_answer).decode('utf-8')
 
         try:
             conn = get_db_connection()
             cur = conn.cursor()
-            cur.execute("INSERT INTO users (firstname, lastname, email, password) VALUES (%s, %s, %s, %s)",
-                        (firstname, lastname, email, hashed_password))
+            cur.execute("""
+                INSERT INTO users (firstname, lastname, email, password, security_question, security_answer)
+                VALUES (%s, %s, %s, %s, %s, %s)
+            """, (firstname, lastname, email, hashed_password, security_question, hashed_answer))
             conn.commit()
             cur.close()
             conn.close()
@@ -55,6 +60,103 @@ def register():
             return render_template('register.html')
 
     return render_template('register.html')
+
+@app.route('/forgot-password', methods=['GET', 'POST'])
+def forgot_password():
+    if request.method == 'POST':
+        email = request.form['email']
+        
+        try:
+            conn = get_db_connection()
+            cur = conn.cursor(cursor_factory=RealDictCursor)
+            cur.execute("SELECT id, security_question FROM users WHERE email = %s", (email,))
+            user = cur.fetchone()
+            cur.close()
+            conn.close()
+
+            if user:
+                session['reset_user_id'] = user['id']
+                return redirect(url_for('security_question'))
+            else:
+                flash("No account found with that email.", "danger")
+        except Exception as e:
+            flash(f"Error: {e}", "danger")
+
+    return render_template('forgot_password.html')
+
+@app.route('/security-question', methods=['GET', 'POST'])
+def security_question():
+    if 'reset_user_id' not in session:
+        return redirect(url_for('forgot_password'))
+
+    user_id = session['reset_user_id']
+    
+    try:
+        conn = get_db_connection()
+        cur = conn.cursor(cursor_factory=RealDictCursor)
+        cur.execute("SELECT security_question FROM users WHERE id = %s", (user_id,))
+        user = cur.fetchone()
+        cur.close()
+        conn.close()
+
+        if not user:
+            flash("User not found.", "danger")
+            return redirect(url_for('forgot_password'))
+
+        if request.method == 'POST':
+            answer = request.form['answer'].lower().strip()
+            
+            conn = get_db_connection()
+            cur = conn.cursor(cursor_factory=RealDictCursor)
+            cur.execute("SELECT security_answer FROM users WHERE id = %s", (user_id,))
+            user = cur.fetchone()
+            
+            if user and bcrypt.check_password_hash(user['security_answer'], answer):
+                session['verified_for_reset'] = True
+                return redirect(url_for('reset_password'))
+            else:
+                flash("Incorrect answer. Please try again.", "danger")
+
+        return render_template('security_question.html', question=user['security_question'])
+
+    except Exception as e:
+        flash(f"Error: {e}", "danger")
+        return redirect(url_for('forgot_password'))
+
+@app.route('/reset-password', methods=['GET', 'POST'])
+def reset_password():
+    if 'reset_user_id' not in session or not session.get('verified_for_reset'):
+        return redirect(url_for('forgot_password'))
+
+    if request.method == 'POST':
+        password = request.form['password']
+        confirm_password = request.form['confirmPassword']
+
+        if password != confirm_password:
+            flash("Passwords do not match.", "danger")
+            return render_template('reset_password.html')
+
+        hashed_password = bcrypt.generate_password_hash(password).decode('utf-8')
+        
+        try:
+            conn = get_db_connection()
+            cur = conn.cursor()
+            cur.execute("UPDATE users SET password = %s WHERE id = %s", 
+                       (hashed_password, session['reset_user_id']))
+            conn.commit()
+            cur.close()
+            conn.close()
+
+            # Clear reset session
+            session.pop('reset_user_id', None)
+            session.pop('verified_for_reset', None)
+
+            flash("Password updated successfully. Please login with your new password.", "success")
+            return redirect(url_for('login'))
+        except Exception as e:
+            flash(f"Error updating password: {e}", "danger")
+
+    return render_template('reset_password.html')
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():

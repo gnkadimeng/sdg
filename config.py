@@ -19,4 +19,5 @@ def get_db_connection():
         return None
 
 
-
+ADMIN_EMAIL = "admin@example.com"
+ADMIN_PASSWORD = "securepassword123"  # In production, use environment variables

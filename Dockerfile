@@ -1,31 +1,20 @@
-# Use Python 3.11 slim image
-FROM python:3.11-slim
+# Use the official Python image
+FROM python:3.13.3
 
-# Set working directory
+# Set the working directory inside the container
 WORKDIR /app
 
-# Install system dependencies
-RUN apt-get update && apt-get install -y \
-    gcc \
-    postgresql-client \
-    && rm -rf /var/lib/apt/lists/*
-
-# Copy requirements first for better caching
+# Copy the requirements first to install dependencies (improves caching)
 COPY requirements.txt .
 
-# Install Python dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+# Install the required Python packages
+RUN pip3 install -r requirements.txt
 
-# Copy application code
+# Copy the rest of the application code
 COPY . .
 
-# Expose the port Flask runs on
+# Expose the port Flask will run on
 EXPOSE 5000
 
-# Set environment variables
-ENV FLASK_APP=app.py
-ENV FLASK_ENV=development
-ENV PYTHONUNBUFFERED=1
-
-# Command to run the application
-CMD ["flask", "run", "--host=0.0.0.0", "--port=5000"]
+# Define the default command to run the app
+CMD ["python", "-m", "flask", "run", "--host=0.0.0.0"]

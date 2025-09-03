@@ -441,6 +441,7 @@ def sdg_quiz(sdg_num):
             session['sdg_num'] = sdg_num
             session.pop('riddle_index', None)
             session.pop('clues_used', None)
+            session.pop('attempts', None)  # Add attempts tracking
             
             # Log activity if user is logged in
             if 'user_id' in session:
@@ -487,6 +488,7 @@ def sdg_quiz(sdg_num):
     if session.get('sdg_num') != sdg_num:
         session['riddle_index'] = 0
         session['clues_used'] = 0
+        session['attempts'] = 0  # Initialize attempts counter
         session['sdg_num'] = sdg_num
 
         # Log activity if user is logged in
@@ -518,15 +520,68 @@ def sdg_quiz(sdg_num):
     riddle = riddles_list[index]
     message = ''
     clue = ''
+    glue_used = False
+    
+    # Initialize attempts if not exists
+    if 'attempts' not in session:
+        session['attempts'] = 0
 
     # Handle form submission
     if request.method == 'POST':
+        # Handle skip question after 3 attempts
+        if 'skip_question' in request.form and session.get('attempts', 0) >= 3:
+            session['riddle_index'] += 1
+            session['attempts'] = 0  # Reset attempts for next question
+            
+            # Log skip activity if user is logged in
+            if 'user_id' in session:
+                try:
+                    conn = get_db_connection()
+                    cur = conn.cursor()
+                    cur.execute(
+                        "INSERT INTO sdg_activity (user_id, sdg_id, action) VALUES (%s, %s, 'skip')",
+                        (session['user_id'], sdg_num)
+                    )
+                    conn.commit()
+                    cur.close()
+                    conn.close()
+                except Exception as e:
+                    print(f"Activity log error (skip): {e}")
+            
+            return redirect(url_for('sdg_quiz', sdg_num=sdg_num))
+        
+        # Handle glue request
+        if 'use_glue' in request.form:
+            if not request.form.get('answer', '').strip():
+                glue_used = True
+                # Auto-fill with the first correct answer
+                answer_input = riddle['answer'][0] if isinstance(riddle['answer'], list) else riddle['answer']
+                message = f'🧴 Glue applied! The answer is: {answer_input}'
+                
+                # Log glue usage if user is logged in
+                if 'user_id' in session:
+                    try:
+                        conn = get_db_connection()
+                        cur = conn.cursor()
+                        cur.execute(
+                            "INSERT INTO sdg_activity (user_id, sdg_id, action) VALUES (%s, %s, 'glue')",
+                            (session['user_id'], sdg_num)
+                        )
+                        conn.commit()
+                        cur.close()
+                        conn.close()
+                    except Exception as e:
+                        print(f"Activity log error (glue): {e}")
+            else:
+                message = 'Glue can only be used when no answer is provided.'
+        
         answer = request.form.get('answer', '').strip().lower()
         correct_answers = [a.lower() for a in riddle['answer']]  # Get all possible correct answers
         
         # Check if answer is correct (matches any of the possible answers)
-        if answer in correct_answers:
+        if answer in correct_answers and not glue_used:
             session['riddle_index'] += 1
+            session['attempts'] = 0  # Reset attempts for next question
             
             # Log correct answer if user is logged in
             if 'user_id' in session:
@@ -544,8 +599,13 @@ def sdg_quiz(sdg_num):
                     print(f"Activity log error (correct): {e}")
             
             return redirect(url_for('sdg_quiz', sdg_num=sdg_num))
+        elif glue_used:
+            # If glue was used, don't count as an attempt
+            pass
         else:
-            message = '❌ Incorrect. Try again.'
+            # Increment attempts counter
+            session['attempts'] = session.get('attempts', 0) + 1
+            message = f'❌ Incorrect. Try again. (Attempt {session["attempts"]} of 3)'
             
             # Handle clue request
             if 'show_clue' in request.form:
@@ -574,7 +634,8 @@ def sdg_quiz(sdg_num):
                          clue=clue, 
                          message=message, 
                          sdg_num=sdg_num,
-                         is_last_question=(index == len(riddles_list) - 1))
+                         is_last_question=(index == len(riddles_list) - 1),
+                         attempts=session.get('attempts', 0)) 
 
 @app.route('/admin/sdg-stats')
 def admin_sdg_stats():

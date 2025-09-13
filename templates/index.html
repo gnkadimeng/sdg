@@ -22,10 +22,10 @@
         {% if session.user_name %}
           <span class="text-white me-3">Welcome, {{ session.user_name }}</span>
           <div class="btn-group ms-2">
-            <a href="{{ url_for('profile') }}" class="btn btn-outline-light" title="Profile">
+            <!-- <a href="{{ url_for('profile') }}" class="btn btn-outline-light" title="Profile">
               <i class="bi bi-person-fill" style="font-size: 1.2rem;"></i>
-            </a>
-            <a href="{{ url_for('dashboard') }}" class="btn btn-outline-light" title="Home">
+            </a> -->
+            <a href="{{ url_for('admin_dashboard') }}" class="btn btn-outline-light" title="Home">
               <i class="bi bi-house-door-fill" style="font-size: 1.2rem;"></i>
             </a>
             <a href="{{ url_for('logout') }}" class="btn btn-outline-light" title="Logout">

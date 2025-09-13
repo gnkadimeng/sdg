@@ -29,7 +29,7 @@
 
   <form method="POST" id="riddleForm">
     <div class="input-group mb-3">
-      <input type="text" class="form-control" name="answer" id="answerInput" placeholder="Type your answer..." 
+      <input type="text" class="form-control" autocorrect="on" spellcheck="true" name="answer" id="answerInput" placeholder="Type your answer..." 
              value="{{ request.form.answer if request.form.answer else '' }}">
       <button class="btn btn-success" type="submit" id="submitBtn">
         {% if is_last_question %}

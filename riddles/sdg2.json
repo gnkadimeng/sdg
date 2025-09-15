@@ -12,10 +12,10 @@
         "image": "food_bank.gif"
     },
     {
-        "question": "I am a farming technique that uses nutrient-rich water to grow plants without soil. What am I called?",
-        "answer": ["hydroponics", "Water-based farming", "Nutrient film technique"],
-        "clue": "This method involves growing plants in water infused with essential nutrients, eliminating the need for soil.",
-        "image": "hydroponics.gif"
+        "question": "I stop edible food from being wasted by sharing it with those who need it. What am I?",
+        "answer": ["Food redistribution", "Food waste reduction"],
+        "clue": "UJ redistributes surplus food to fight hunger.",
+        "image": "foodwaste.gif"
     },
     {
         "question": "I am a UJ initiative that collaborates with a major food company to provide monthly food parcels to students. What is my name?",

@@ -12,6 +12,19 @@
   <form action="{{ url_for('sdg_quiz', sdg_num=sdg_id) }}" method="get">
     <button id="proceedBtn" class="btn btn-success btn-lg mt-2" disabled>Proceed to Game</button>
   </form>
+
+    <!-- Links Section -->
+  <div class="mt-4">
+    <a href="{{ sdg_links['page'] }}" target="_blank" class="btn btn-primary btn-lg me-3">
+      🌍 Learn More about SDG {{ sdg_id }}
+    </a>
+    <a href="{{ sdg_links['pdf'] }}" target="_blank" class="btn btn-outline-dark btn-lg">
+      📄 Download SDG {{ sdg_id }} PDF Report
+    </a>
+  </div>
+
+
+
 </div>
 
 <script>

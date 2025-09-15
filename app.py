@@ -416,8 +416,36 @@ def questionnaire():
     return render_template('questionnaire.html')
 
 
+# @app.route('/learn/<int:sdg_id>')
+# def learn_sdg(sdg_id):
+#     if 'user_id' in session:
+#         try:
+#             conn = get_db_connection()
+#             cur = conn.cursor()
+#             cur.execute("INSERT INTO sdg_activity (user_id, sdg_id, action) VALUES (%s, %s, 'view')",
+#                         (session['user_id'], sdg_id))
+#             conn.commit()
+#             cur.close()
+#             conn.close()
+#         except Exception as e:
+#             print(f"Activity log error (view): {e}")
+
+#     return render_template('learn.html', sdg_id=sdg_id)
+
+
 @app.route('/learn/<int:sdg_id>')
 def learn_sdg(sdg_id):
+    # Load the SDG links from the JSON file
+    file_path = os.path.join(app.root_path, 'static', 'data', 'sdg_resources.json')
+    with open(file_path, 'r') as f:
+        sdg_resources = json.load(f)
+
+    links = sdg_resources.get(str(sdg_id), {
+        "page": "https://www.uj.ac.za/about/sdg-impact/",
+        "pdf": "https://www.uj.ac.za/wp-content/uploads/2024/10/uj-annual-sdg-report-2023.pdf"
+    })
+
+    # Log user activity (unchanged)
     if 'user_id' in session:
         try:
             conn = get_db_connection()
@@ -430,7 +458,8 @@ def learn_sdg(sdg_id):
         except Exception as e:
             print(f"Activity log error (view): {e}")
 
-    return render_template('learn.html', sdg_id=sdg_id)
+    return render_template('learn.html', sdg_id=sdg_id, sdg_links=links)
+
 
 @app.route('/sdg/<int:sdg_num>', methods=['GET', 'POST'])
 def sdg_quiz(sdg_num):

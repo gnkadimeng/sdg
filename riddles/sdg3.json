@@ -1,7 +1,7 @@
 [
     {
         "question": "Many UJ students volunteer at this local hospital known for community healthcare efforts. What's its name?",
-        "answer": ["Helen Joseph Hospital", "Baragwanath Hospital (Bara)", "Charlotte Maxeke Hospital"],
+        "answer": ["Helen Joseph Hospital", "Baragwanath Hospital", "Charlotte Maxeke Hospital", "Bara Hospital", "Bara", "Helen Joseph"],
         "clue": "It's named after a famous South African activist and located near UJ.",
         "image": "hospital.gif"
     },

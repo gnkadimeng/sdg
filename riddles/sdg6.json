@@ -43,7 +43,7 @@
     },
     {
         "question": "I'm on taps and showers, helping water last. With sensors or flow controls, I reduce waste fast. At UJ, I help cut the flow, So water-wise habits start to grow. What am I?",
-        "answer": ["Water-Saving Devices", "Low-Flow Fixtures", "Conservation Tools"],
+        "answer": ["Water-Saving Devices", "Low-Flow Fixtures", "Conservation Tools", "Water-restricting showerheads", "Water-saving showerheads"],
         "clue": "Devices like tap aerators, low-flow shower heads, and sensors used at UJ to reduce water consumption.",
         "image": "water_savers.png"
     },

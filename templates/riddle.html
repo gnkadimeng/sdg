@@ -27,12 +27,11 @@
   <div class="alert alert-warning">{{ message }}</div>
   {% endif %}
 
-  <form method="POST">
-    <!-- Removed the options buttons section -->
-    
+  <form method="POST" id="riddleForm">
     <div class="input-group mb-3">
-      <input type="text" class="form-control" name="answer" id="answerInput" placeholder="Type your answer..." required>
-      <button class="btn btn-success" type="submit">
+      <input type="text" class="form-control" autocorrect="on" spellcheck="true" name="answer" id="answerInput" placeholder="Type your answer..." 
+             value="{{ request.form.answer if request.form.answer else '' }}">
+      <button class="btn btn-success" type="submit" id="submitBtn">
         {% if is_last_question %}
           Final Submit 🏁
         {% else %}
@@ -40,15 +39,79 @@
         {% endif %}
       </button>
     </div>
-    <button class="btn btn-outline-info" name="show_clue" value="true">Show Clue 🕵️</button>
+    <div class="d-flex justify-content-between">
+      <button class="btn btn-outline-info" name="show_clue" value="true" type="button" id="clueBtn">
+        Show Clue 🕵️
+      </button>
+      <button class="btn btn-outline-warning" name="use_glue" value="true" type="button" id="glueBtn">
+        Use Clue 🧴
+      </button>
+    </div>
   </form>
 
   {% if clue %}
   <div class="alert alert-info mt-3">💡 Clue: {{ clue }}</div>
   {% endif %}
+  
+  {% if attempts >= 3 %}
+  <div class="alert alert-secondary mt-3">
+    <p>Having trouble? You can proceed to the next question after 3 attempts.</p>
+    <form method="POST">
+      <input type="hidden" name="skip_question" value="true">
+      <button type="submit" class="btn btn-outline-primary">Skip to Next Question</button>
+    </form>
+  </div>
+  {% endif %}
 </div>
 
-
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const answerInput = document.getElementById('answerInput');
+    const form = document.getElementById('riddleForm');
+    const clueBtn = document.getElementById('clueBtn');
+    const glueBtn = document.getElementById('glueBtn');
+    const submitBtn = document.getElementById('submitBtn');
+    
+    // Form validation
+    form.addEventListener('submit', function(e) {
+      if (!answerInput.value.trim()) {
+        e.preventDefault();
+        alert('Please enter an answer before submitting.');
+        answerInput.focus();
+      }
+    });
+    
+    // Clue button handling
+    clueBtn.addEventListener('click', function() {
+      // Create a hidden input for the clue request
+      const hiddenInput = document.createElement('input');
+      hiddenInput.type = 'hidden';
+      hiddenInput.name = 'show_clue';
+      hiddenInput.value = 'true';
+      form.appendChild(hiddenInput);
+      
+      // Submit the form
+      form.submit();
+    });
+    
+    // Glue button handling
+    glueBtn.addEventListener('click', function() {
+      if (!answerInput.value.trim()) {
+        // Create a hidden input for the glue request
+        const hiddenInput = document.createElement('input');
+        hiddenInput.type = 'hidden';
+        hiddenInput.name = 'use_glue';
+        hiddenInput.value = 'true';
+        form.appendChild(hiddenInput);
+        
+        // Submit the form
+        form.submit();
+      } else {
+        alert('Glue can only be used when no answer is provided.');
+      }
+    });
+  });
+</script>
 
 <style>
   .card {

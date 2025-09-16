@@ -33,18 +33,23 @@ def register():
         email = request.form['email']
         password = request.form['password']
         confirmpassword = request.form['confirmPassword']
+        security_question = request.form['securityQuestion']
+        security_answer = request.form['securityAnswer'].lower().strip()  # normalize answer
 
         if password != confirmpassword:
             flash("Passwords do not match.", "danger")
             return render_template('register.html')
 
         hashed_password = bcrypt.generate_password_hash(password).decode('utf-8')
+        hashed_answer = bcrypt.generate_password_hash(security_answer).decode('utf-8')
 
         try:
             conn = get_db_connection()
             cur = conn.cursor()
-            cur.execute("INSERT INTO users (firstname, lastname, email, password) VALUES (%s, %s, %s, %s)",
-                        (firstname, lastname, email, hashed_password))
+            cur.execute("""
+                INSERT INTO users (firstname, lastname, email, password, security_question, security_answer)
+                VALUES (%s, %s, %s, %s, %s, %s)
+            """, (firstname, lastname, email, hashed_password, security_question, hashed_answer))
             conn.commit()
             cur.close()
             conn.close()
@@ -55,6 +60,103 @@ def register():
             return render_template('register.html')
 
     return render_template('register.html')
+
+@app.route('/forgot-password', methods=['GET', 'POST'])
+def forgot_password():
+    if request.method == 'POST':
+        email = request.form['email']
+        
+        try:
+            conn = get_db_connection()
+            cur = conn.cursor(cursor_factory=RealDictCursor)
+            cur.execute("SELECT id, security_question FROM users WHERE email = %s", (email,))
+            user = cur.fetchone()
+            cur.close()
+            conn.close()
+
+            if user:
+                session['reset_user_id'] = user['id']
+                return redirect(url_for('security_question'))
+            else:
+                flash("No account found with that email.", "danger")
+        except Exception as e:
+            flash(f"Error: {e}", "danger")
+
+    return render_template('forgot_password.html')
+
+@app.route('/security-question', methods=['GET', 'POST'])
+def security_question():
+    if 'reset_user_id' not in session:
+        return redirect(url_for('forgot_password'))
+
+    user_id = session['reset_user_id']
+    
+    try:
+        conn = get_db_connection()
+        cur = conn.cursor(cursor_factory=RealDictCursor)
+        cur.execute("SELECT security_question FROM users WHERE id = %s", (user_id,))
+        user = cur.fetchone()
+        cur.close()
+        conn.close()
+
+        if not user:
+            flash("User not found.", "danger")
+            return redirect(url_for('forgot_password'))
+
+        if request.method == 'POST':
+            answer = request.form['answer'].lower().strip()
+            
+            conn = get_db_connection()
+            cur = conn.cursor(cursor_factory=RealDictCursor)
+            cur.execute("SELECT security_answer FROM users WHERE id = %s", (user_id,))
+            user = cur.fetchone()
+            
+            if user and bcrypt.check_password_hash(user['security_answer'], answer):
+                session['verified_for_reset'] = True
+                return redirect(url_for('reset_password'))
+            else:
+                flash("Incorrect answer. Please try again.", "danger")
+
+        return render_template('security_question.html', question=user['security_question'])
+
+    except Exception as e:
+        flash(f"Error: {e}", "danger")
+        return redirect(url_for('forgot_password'))
+
+@app.route('/reset-password', methods=['GET', 'POST'])
+def reset_password():
+    if 'reset_user_id' not in session or not session.get('verified_for_reset'):
+        return redirect(url_for('forgot_password'))
+
+    if request.method == 'POST':
+        password = request.form['password']
+        confirm_password = request.form['confirmPassword']
+
+        if password != confirm_password:
+            flash("Passwords do not match.", "danger")
+            return render_template('reset_password.html')
+
+        hashed_password = bcrypt.generate_password_hash(password).decode('utf-8')
+        
+        try:
+            conn = get_db_connection()
+            cur = conn.cursor()
+            cur.execute("UPDATE users SET password = %s WHERE id = %s", 
+                       (hashed_password, session['reset_user_id']))
+            conn.commit()
+            cur.close()
+            conn.close()
+
+            # Clear reset session
+            session.pop('reset_user_id', None)
+            session.pop('verified_for_reset', None)
+
+            flash("Password updated successfully. Please login with your new password.", "success")
+            return redirect(url_for('login'))
+        except Exception as e:
+            flash(f"Error updating password: {e}", "danger")
+
+    return render_template('reset_password.html')
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -314,8 +416,36 @@ def questionnaire():
     return render_template('questionnaire.html')
 
 
+# @app.route('/learn/<int:sdg_id>')
+# def learn_sdg(sdg_id):
+#     if 'user_id' in session:
+#         try:
+#             conn = get_db_connection()
+#             cur = conn.cursor()
+#             cur.execute("INSERT INTO sdg_activity (user_id, sdg_id, action) VALUES (%s, %s, 'view')",
+#                         (session['user_id'], sdg_id))
+#             conn.commit()
+#             cur.close()
+#             conn.close()
+#         except Exception as e:
+#             print(f"Activity log error (view): {e}")
+
+#     return render_template('learn.html', sdg_id=sdg_id)
+
+
 @app.route('/learn/<int:sdg_id>')
 def learn_sdg(sdg_id):
+    # Load the SDG links from the JSON file
+    file_path = os.path.join(app.root_path, 'static', 'data', 'sdg_resources.json')
+    with open(file_path, 'r') as f:
+        sdg_resources = json.load(f)
+
+    links = sdg_resources.get(str(sdg_id), {
+        "page": "https://www.uj.ac.za/about/sdg-impact/",
+        "pdf": "https://www.uj.ac.za/wp-content/uploads/2024/10/uj-annual-sdg-report-2023.pdf"
+    })
+
+    # Log user activity (unchanged)
     if 'user_id' in session:
         try:
             conn = get_db_connection()
@@ -328,7 +458,8 @@ def learn_sdg(sdg_id):
         except Exception as e:
             print(f"Activity log error (view): {e}")
 
-    return render_template('learn.html', sdg_id=sdg_id)
+    return render_template('learn.html', sdg_id=sdg_id, sdg_links=links)
+
 
 @app.route('/sdg/<int:sdg_num>', methods=['GET', 'POST'])
 def sdg_quiz(sdg_num):
@@ -339,6 +470,7 @@ def sdg_quiz(sdg_num):
             session['sdg_num'] = sdg_num
             session.pop('riddle_index', None)
             session.pop('clues_used', None)
+            session.pop('attempts', None)  # Add attempts tracking
             
             # Log activity if user is logged in
             if 'user_id' in session:
@@ -385,6 +517,7 @@ def sdg_quiz(sdg_num):
     if session.get('sdg_num') != sdg_num:
         session['riddle_index'] = 0
         session['clues_used'] = 0
+        session['attempts'] = 0  # Initialize attempts counter
         session['sdg_num'] = sdg_num
 
         # Log activity if user is logged in
@@ -416,15 +549,68 @@ def sdg_quiz(sdg_num):
     riddle = riddles_list[index]
     message = ''
     clue = ''
+    glue_used = False
+    
+    # Initialize attempts if not exists
+    if 'attempts' not in session:
+        session['attempts'] = 0
 
     # Handle form submission
     if request.method == 'POST':
+        # Handle skip question after 3 attempts
+        if 'skip_question' in request.form and session.get('attempts', 0) >= 3:
+            session['riddle_index'] += 1
+            session['attempts'] = 0  # Reset attempts for next question
+            
+            # Log skip activity if user is logged in
+            if 'user_id' in session:
+                try:
+                    conn = get_db_connection()
+                    cur = conn.cursor()
+                    cur.execute(
+                        "INSERT INTO sdg_activity (user_id, sdg_id, action) VALUES (%s, %s, 'skip')",
+                        (session['user_id'], sdg_num)
+                    )
+                    conn.commit()
+                    cur.close()
+                    conn.close()
+                except Exception as e:
+                    print(f"Activity log error (skip): {e}")
+            
+            return redirect(url_for('sdg_quiz', sdg_num=sdg_num))
+        
+        # Handle glue request
+        if 'use_glue' in request.form:
+            if not request.form.get('answer', '').strip():
+                glue_used = True
+                # Auto-fill with the first correct answer
+                answer_input = riddle['answer'][0] if isinstance(riddle['answer'], list) else riddle['answer']
+                message = f'🧴 Glue applied! The answer is: {answer_input}'
+                
+                # Log glue usage if user is logged in
+                if 'user_id' in session:
+                    try:
+                        conn = get_db_connection()
+                        cur = conn.cursor()
+                        cur.execute(
+                            "INSERT INTO sdg_activity (user_id, sdg_id, action) VALUES (%s, %s, 'glue')",
+                            (session['user_id'], sdg_num)
+                        )
+                        conn.commit()
+                        cur.close()
+                        conn.close()
+                    except Exception as e:
+                        print(f"Activity log error (glue): {e}")
+            else:
+                message = 'Glue can only be used when no answer is provided.'
+        
         answer = request.form.get('answer', '').strip().lower()
         correct_answers = [a.lower() for a in riddle['answer']]  # Get all possible correct answers
         
         # Check if answer is correct (matches any of the possible answers)
-        if answer in correct_answers:
+        if answer in correct_answers and not glue_used:
             session['riddle_index'] += 1
+            session['attempts'] = 0  # Reset attempts for next question
             
             # Log correct answer if user is logged in
             if 'user_id' in session:
@@ -442,8 +628,13 @@ def sdg_quiz(sdg_num):
                     print(f"Activity log error (correct): {e}")
             
             return redirect(url_for('sdg_quiz', sdg_num=sdg_num))
+        elif glue_used:
+            # If glue was used, don't count as an attempt
+            pass
         else:
-            message = '❌ Incorrect. Try again.'
+            # Increment attempts counter
+            session['attempts'] = session.get('attempts', 0) + 1
+            message = f'❌ Incorrect. Try again. (Attempt {session["attempts"]} of 3)'
             
             # Handle clue request
             if 'show_clue' in request.form:
@@ -472,7 +663,8 @@ def sdg_quiz(sdg_num):
                          clue=clue, 
                          message=message, 
                          sdg_num=sdg_num,
-                         is_last_question=(index == len(riddles_list) - 1))
+                         is_last_question=(index == len(riddles_list) - 1),
+                         attempts=session.get('attempts', 0)) 
 
 @app.route('/admin/sdg-stats')
 def admin_sdg_stats():

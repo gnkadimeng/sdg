@@ -6,20 +6,20 @@
         "image": "glass_ceiling.gif"
     },
     {
-        "question": "I am unpaid but always done, at home or work, my labor never won. Without me, the world would fall apart, yet recognition I still lack in heart. What am I?",
-        "answer": ["Unpaid Care Work", "Domestic Labour", "Household Duties"],
-        "clue": "This essential work, mostly carried out by women, includes caregiving and domestic tasks.",
-        "image": "unpaid_care.gif"
+        "question": "I am a mentorship program where UJ women lecturers guide Grade 12 learners, challenging stereotypes. What am I?",
+        "answer": ["STEM Menther", "Mentorship program", "UJ women mentorship"],
+        "clue": "This program serves a platform to empower young women.",
+        "image": "Stementher.jpeg"
     },
     {
         "question": "I exist when equal pay is not seen, between men and women, a growing sheen. I show the difference for work the same, making it clear there's an unjust game. What am I?",
-        "answer": ["Gender Pay Gap", "Wage Gap", "Pay Disparity"],
+        "answer": ["Gender Pay Gap", "Wage Gap", "Pay Disparity", "Gender imbalance"],
         "clue": "The disparity between the wages of men and women for similar roles is known as this.",
         "image": "gender_pay_gap.gif"
     },
     {
         "question": "Though laws might say equality is near, in some places, violence still strikes fear. I am the act that must be stopped, where women's safety should be topped. What am I?",
-        "answer": ["Gender-Based Violence", "Violence Against Women", "Abuse"],
+        "answer": ["Gender-Based Violence", "Violence Against Women", "Abuse", "GBV"],
         "clue": "This widespread issue affects women and girls globally, often hidden but persistent.",
         "image": "gender_based_violence.gif"
     },

@@ -30,6 +30,22 @@
           <label for="confirmPassword" class="form-label">Confirm Password</label>
           <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required>
         </div>
+
+        <div class="mb-3">
+          <label for="securityQuestion" class="form-label">Security Question</label>
+          <select class="form-select" id="securityQuestion" name="securityQuestion" required>
+            <option value="" selected disabled>Select a security question</option>
+            <option value="What was your first pet's name?">What was your first pet's name?</option>
+            <option value="What city were you born in?">What city were you born in?</option>
+            <option value="What is your mother's maiden name?">What is your mother's maiden name?</option>
+            <option value="What was the name of your first school?">What was the name of your first school?</option>
+            <option value="What is your favorite book?">What is your favorite book?</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="securityAnswer" class="form-label">Answer to Security Question</label>
+          <input type="text" class="form-control" id="securityAnswer" name="securityAnswer" required>
+        </div>
         <div class="d-grid">
           <button type="submit" class="btn btn-success">Register</button>
         </div>
